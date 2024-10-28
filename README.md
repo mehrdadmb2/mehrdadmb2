@@ -1,5 +1,5 @@
 # 💫 About Me:
-A simple mechanical engineering student in Iran<br>I am not going to create and upload a very special project<br>I made this profile so that I can more easily follow others and use their repository<br>Do not open a special account on me.
+A simple mechanical engineering student in Iran<br>I am not going to create and upload a very special project<br>I made this profile so that I can more easily follow others and use their repository<br><!-- Do not open a special account on me.-->
 
 
 ## 🌐 Socials:
