@@ -49,13 +49,14 @@ Check out some of my GitHub stats as I continue to learn and grow:
 ![](https://github-contributor-stats.vercel.app/api?username=mehrdadmb2&limit=5&theme=neon&combine_all_yearly_contributions=true)
 
 ---
+
 ## 📊 Project Badges:
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmehrdadmb2%2FV2ray_Sub&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://github.com/mehrdadmb2/V2ray_Sub)
-[![GitHub Stars](https://img.shields.io/github/stars/mehrdadmb2/V2ray_Sub?style=plastic&color=brightgreen&label=Stars)](https://github.com/mehrdadmb2/V2ray_Sub/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/mehrdadmb2/V2ray_Sub?style=plastic&color=blue&label=Forks)](https://github.com/mehrdadmb2/V2ray_Sub/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/mehrdadmb2/V2ray_Sub?style=plastic&color=orange&label=Issues)](https://github.com/mehrdadmb2/V2ray_Sub/issues)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/mehrdadmb2/V2ray_Sub?style=plastic&color=red&label=Last%20Commit)](https://github.com/mehrdadmb2/V2ray_Sub/commits/main)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmehrdadmb2%2Fmehrdadmb2&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://github.com/mehrdadmb2/mehrdadmb2)
+[![GitHub Stars](https://img.shields.io/github/stars/mehrdadmb2/mehrdadmb2?style=plastic&color=brightgreen&label=Stars)](https://github.com/mehrdadmb2/mehrdadmb2/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/mehrdadmb2/mehrdadmb2?style=plastic&color=blue&label=Forks)](https://github.com/mehrdadmb2/mehrdadmb2/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/mehrdadmb2/mehrdadmb2?style=plastic&color=orange&label=Issues)](https://github.com/mehrdadmb2/mehrdadmb2/issues)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/mehrdadmb2/mehrdadmb2?style=plastic&color=red&label=Last%20Commit)](https://github.com/mehrdadmb2/mehrdadmb2/commits/main)
 
 ---
 
