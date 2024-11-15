@@ -33,6 +33,7 @@ I’m working with a range of technologies to broaden my skill set and expand my
 ## 📊 GitHub Stats:
 Check out some of my GitHub stats as I continue to learn and grow:
 
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mehrdadmb2&theme=yeblu)
 ![](https://github-readme-stats.vercel.app/api?username=mehrdadmb2&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
 ![](https://github-readme-streak-stats.herokuapp.com/?user=mehrdadmb2&theme=dark&hide_border=false)
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=mehrdadmb2&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
