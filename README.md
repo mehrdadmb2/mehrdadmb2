@@ -8,6 +8,32 @@ Let's connect, collaborate, and share knowledge!
 
 ## 🌐 Connect with Me:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/0mehrdad0) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://www.facebook.com/mehrdad.mb.94043?mibextid=ZbWKwL) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/_._.m._.b) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mehrdad-mb-658520232) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pin.it/4bMZOklKK) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/u/IllustriousEssay4051) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/__Mehrdad_)
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<svg width="100%" height="150" xmlns="http://www.w3.org/2000/svg">
+  <rect x="45" y="18" width="155" height="45" style="stroke:green;fill:none;">
+    <animateMotion
+      path="M0,0 q60,100 100,0 q60,-20 100,0"
+      begin="0s"
+      dur="10s"
+      repeatCount="indefinite" />
+  </rect>
+  <text x="50" y="50" style="font-family:Verdana;font-size:32">Instagram : _._.m._.b
+    <animateMotion
+      path="M0,0 q60,100 100,0 q60,-20 100,0"
+      begin="0s"
+      dur="10s"
+      repeatCount="indefinite" />
+  </text>
+  Sorry, your browser does not support inline SVG.  
+</svg>
+
+</body>
+</html>
+
 
 ---
 
