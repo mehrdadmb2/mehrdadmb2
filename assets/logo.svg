@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B44FE8"/>
+      <stop offset="100%" stop-color="#3C096C"/>
+    </linearGradient>
+    <style>
+      .pcb { fill: none; stroke: url(#grad); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .text { font-family: 'Courier New', monospace; font-weight: bold; fill: url(#grad); }
+    </style>
+  </defs>
+  <!-- حرف M با خطوط PCB -->
+  <path class="pcb" d="M30 170 L50 70 L70 130 L90 50 L110 130 L130 70 L150 170"/>
+  <!-- مدارهای اضافی -->
+  <path class="pcb" d="M30 170 L30 180 M150 170 L150 180" stroke-width="3"/>
+  <circle cx="30" cy="180" r="4" fill="#B44FE8"/>
+  <circle cx="150" cy="180" r="4" fill="#B44FE8"/>
+  <!-- نقاط اتصال -->
+  <circle cx="50" cy="70" r="5" fill="#B44FE8"/>
+  <circle cx="90" cy="50" r="5" fill="#B44FE8"/>
+  <circle cx="130" cy="70" r="5" fill="#B44FE8"/>
+  <!-- متن MEHRDAD پایین -->
+  <text x="100" y="195" text-anchor="middle" font-size="14" class="text">MEHRDAD</text>
+</svg>
