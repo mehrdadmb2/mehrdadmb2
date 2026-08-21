@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,23&height=230&section=header&text=MEHRDAD&fontSize=88&fontColor=B44FE8&animation=fadeIn&fontAlignY=36&desc=Software%20Developer%20%7C%20IoT%20Builder%20%7C%20Embedded%20Systems%20Enthusiast&descAlignY=60&descSize=17&descColor=E0AAFF&stroke=B44FE8&strokeWidth=1.4"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,23&height=250&section=header&text=MEHRDAD&fontSize=88&fontColor=B44FE8&animation=fadeIn&fontAlignY=36&desc=Software%20Developer%20%7C%20IoT%20Builder%20%7C%20Embedded%20Systems%20Enthusiast&descAlignY=60&descSize=17&descColor=E0AAFF&stroke=B44FE8&strokeWidth=1.4"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2600&pause=700&color=B44FE8&center=true&vCenter=true&random=false&width=780&height=50&lines=%24+whoami+%E2%86%92+Mehrdad+%7C+Computer+Engineering;%24+cat+skills.log+%7C+grep+%22IoT+%7C+Software+%7C+3D%22;%24+python+build_something_useful.py;%24+git+commit+-m+%22Turn+ideas+into+reality%22;%24+sudo+apt+upgrade+knowledge;%24+status+%E2%86%92+Always+learning%2C+always+building)](https://github.com/mehrdadmb2)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=700&color=B44FE8&center=true&vCenter=true&random=false&width=800&height=50&lines=%24+whoami+%E2%86%92+Mehrdad+%7C+Computer+Engineering;%24+cat+skills.log+%7C+grep+%22IoT+%7C+Software+%7C+3D%22;%24+python+build_something_useful.py;%24+git+commit+-m+%22Turn+ideas+into+reality%22;%24+sudo+apt+upgrade+knowledge;%24+status+%E2%86%92+Always+learning%2C+always+building)](https://github.com/mehrdadmb2)
 
 <br/>
 
@@ -10,6 +10,8 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Website-B44FE8?style=for-the-badge&logo=vercel&logoColor=white)](https://mehrdadmb2.github.io/mehrdad-dev/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mehrdad-mb-658520232)
 [![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_._.m._.b)
+[![Discord](https://img.shields.io/badge/Discord-0mehrdad0-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/0mehrdad0)
+[![X](https://img.shields.io/badge/X-@__Mehrdad_-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/__Mehrdad_)
 
 </div>
 
@@ -179,19 +181,25 @@ next_targets:
 
 <div align="center">
 
+<!-- 3D Contribution Graph - نیاز به GitHub Action داره -->
+<img src="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph"/>
+
+<br/><br/>
+
+<!-- Activity Graph با گرادیانت و Area -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=mehrdadmb2&bg_color=0d0d0d&color=B44FE8&line=9D4EDD&point=E0AAFF&area=true&area_color=3C096C&hide_border=true&custom_title=Contribution%20Activity&title_color=B44FE8&radius=6" width="100%" alt="Contribution activity graph"/>
 
 <br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mehrdadmb2&theme=2077" width="100%" alt="GitHub profile summary"/>
-
-<br/>
-
+<!-- GitHub Stats با رنک -->
 <img src="https://github-readme-stats.vercel.app/api?username=mehrdadmb2&theme=radical&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&rank_icon=percentile&icon_color=B44FE8&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d" height="180" alt="GitHub statistics"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mehrdadmb2&theme=radical&hide_border=true&layout=compact&langs_count=8&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d" height="180" alt="Most used languages"/>
+
+<!-- Top Languages با حالت Donut -->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mehrdadmb2&theme=radical&hide_border=true&layout=donut&langs_count=8&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d" height="180" alt="Most used languages"/>
 
 <br/>
 
+<!-- Contribution Streak -->
 <img src="https://streak-stats.demolab.com?user=mehrdadmb2&theme=radical&hide_border=true&background=0D0D0D&ring=B44FE8&fire=9D4EDD&currStreakLabel=E0AAFF&sideLabels=B44FE8&dates=7C3AED" width="70%" alt="GitHub contribution streak"/>
 
 </div>
@@ -202,6 +210,7 @@ next_targets:
 
 <div align="center">
 
+<!-- Snake Animation با پشتیبانی از دارک/لایت مود -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/output/github-contribution-grid-snake-dark.svg"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/output/github-contribution-grid-snake.svg"/>
@@ -219,6 +228,19 @@ next_targets:
 <img src="https://github-profile-trophy.vercel.app/?username=mehrdadmb2&theme=radical&no-frame=true&no-bg=true&margin-w=6&margin-h=8&column=7" width="100%" alt="GitHub trophies"/>
 
 </div>
+
+---
+
+## `~/wakatime $ cat coding-stats`
+
+<!-- اگر از WakaTime استفاده می‌کنید، این بخش رو فعال کنید -->
+<!-- 
+<div align="center">
+
+[![Wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=mehrdadmb2&layout=compact&theme=radical&hide_border=true&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d)](https://wakatime.com/@mehrdadmb2)
+
+</div>
+-->
 
 ---
 
@@ -264,4 +286,3 @@ I am open to collaborating on practical software, IoT, embedded systems and open
 ```
 
 </div>
-```
