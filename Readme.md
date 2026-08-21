@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,23&height=250&section=header&text=MEHRDAD&fontSize=88&fontColor=B44FE8&animation=fadeIn&fontAlignY=36&desc=Software%20Developer%20%7C%20IoT%20Builder%20%7C%20Embedded%20Systems%20Enthusiast&descAlignY=60&descSize=17&descColor=E0AAFF&stroke=B44FE8&strokeWidth=1.4"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,23&height=280&section=header&text=MEHRDAD&fontSize=88&fontColor=B44FE8&animation=fadeIn&fontAlignY=36&desc=Software%20Developer%20%7C%20IoT%20Builder%20%7C%20Embedded%20Systems%20Enthusiast&descAlignY=60&descSize=17&descColor=E0AAFF&stroke=B44FE8&strokeWidth=1.4"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=700&color=B44FE8&center=true&vCenter=true&random=false&width=800&height=50&lines=%24+whoami+%E2%86%92+Mehrdad+%7C+Computer+Engineering;%24+cat+skills.log+%7C+grep+%22IoT+%7C+Software+%7C+3D%22;%24+python+build_something_useful.py;%24+git+commit+-m+%22Turn+ideas+into+reality%22;%24+sudo+apt+upgrade+knowledge;%24+status+%E2%86%92+Always+learning%2C+always+building)](https://github.com/mehrdadmb2)
+<br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=700&color=B44FE8&center=true&vCenter=true&random=false&width=900&height=50&lines=%24+whoami+%E2%86%92+Mehrdad+%7C+Computer+Engineering;%24+cat+skills.log+%7C+grep+%22IoT+%7C+Software+%7C+3D%22;%24+python+build_something_useful.py;%24+git+commit+-m+%22Turn+ideas+into+reality%22;%24+sudo+apt+upgrade+knowledge;%24+status+%E2%86%92+Always+learning%2C+always+building)](https://github.com/mehrdadmb2)
 
 <br/>
 
@@ -181,26 +183,39 @@ next_targets:
 
 <div align="center">
 
-<!-- 3D Contribution Graph - نیاز به GitHub Action داره -->
+<!-- ============ METRICS (lowlighter/metrics) ============ -->
+<!-- این بخش توسط GitHub Action به‌روز میشه -->
+<img src="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/main/metrics.svg" width="100%" alt="Metrics Dashboard"/>
+
+<br/><br/>
+
+<!-- ============ 3D CONTRIBUTION ============ -->
 <img src="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph"/>
 
 <br/><br/>
 
-<!-- Activity Graph با گرادیانت و Area -->
+<!-- ============ ACTIVITY GRAPH ============ -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=mehrdadmb2&bg_color=0d0d0d&color=B44FE8&line=9D4EDD&point=E0AAFF&area=true&area_color=3C096C&hide_border=true&custom_title=Contribution%20Activity&title_color=B44FE8&radius=6" width="100%" alt="Contribution activity graph"/>
 
 <br/>
 
-<!-- GitHub Stats با رنک -->
+<!-- ============ STATS & LANGUAGES ============ -->
 <img src="https://github-readme-stats.vercel.app/api?username=mehrdadmb2&theme=radical&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&rank_icon=percentile&icon_color=B44FE8&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d" height="180" alt="GitHub statistics"/>
 
-<!-- Top Languages با حالت Donut -->
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mehrdadmb2&theme=radical&hide_border=true&layout=donut&langs_count=8&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d" height="180" alt="Most used languages"/>
 
 <br/>
 
-<!-- Contribution Streak -->
+<!-- ============ STREAK ============ -->
 <img src="https://streak-stats.demolab.com?user=mehrdadmb2&theme=radical&hide_border=true&background=0D0D0D&ring=B44FE8&fire=9D4EDD&currStreakLabel=E0AAFF&sideLabels=B44FE8&dates=7C3AED" width="70%" alt="GitHub contribution streak"/>
+
+<br/><br/>
+
+<!-- ============ WAKATIME (اختیاری) ============ -->
+<!-- اگر از WakaTime استفاده می‌کنید، این بخش رو فعال کنید -->
+<!-- 
+[![Wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=mehrdadmb2&layout=compact&theme=radical&hide_border=true&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d)](https://wakatime.com/@mehrdadmb2)
+-->
 
 </div>
 
@@ -210,7 +225,6 @@ next_targets:
 
 <div align="center">
 
-<!-- Snake Animation با پشتیبانی از دارک/لایت مود -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/output/github-contribution-grid-snake-dark.svg"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/output/github-contribution-grid-snake.svg"/>
@@ -231,13 +245,13 @@ next_targets:
 
 ---
 
-## `~/wakatime $ cat coding-stats`
+## `~/blog $ cat latest-posts`
 
-<!-- اگر از WakaTime استفاده می‌کنید، این بخش رو فعال کنید -->
+<!-- اگر از dev.to یا medium استفاده می‌کنید -->
 <!-- 
 <div align="center">
 
-[![Wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=mehrdadmb2&layout=compact&theme=radical&hide_border=true&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d)](https://wakatime.com/@mehrdadmb2)
+[![Dev.to](https://github-readme-medium.vercel.app/?username=mehrdad&limit=2)](https://dev.to/mehrdad)
 
 </div>
 -->
