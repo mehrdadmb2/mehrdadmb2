@@ -184,7 +184,6 @@ next_targets:
 <div align="center">
 
 <!-- ============ METRICS (lowlighter/metrics) ============ -->
-<!-- این بخش توسط GitHub Action به‌روز میشه -->
 <img src="https://raw.githubusercontent.com/mehrdadmb2/mehrdadmb2/main/metrics.svg" width="100%" alt="Metrics Dashboard"/>
 
 <br/><br/>
@@ -208,14 +207,6 @@ next_targets:
 
 <!-- ============ STREAK ============ -->
 <img src="https://streak-stats.demolab.com?user=mehrdadmb2&theme=radical&hide_border=true&background=0D0D0D&ring=B44FE8&fire=9D4EDD&currStreakLabel=E0AAFF&sideLabels=B44FE8&dates=7C3AED" width="70%" alt="GitHub contribution streak"/>
-
-<br/><br/>
-
-<!-- ============ WAKATIME (اختیاری) ============ -->
-<!-- اگر از WakaTime استفاده می‌کنید، این بخش رو فعال کنید -->
-<!-- 
-[![Wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=mehrdadmb2&layout=compact&theme=radical&hide_border=true&title_color=B44FE8&text_color=E0AAFF&bg_color=0d0d0d)](https://wakatime.com/@mehrdadmb2)
--->
 
 </div>
 
@@ -245,16 +236,42 @@ next_targets:
 
 ---
 
-## `~/blog $ cat latest-posts`
+## `~/support $ ./donate --help`
 
-<!-- اگر از dev.to یا medium استفاده می‌کنید -->
-<!-- 
 <div align="center">
 
-[![Dev.to](https://github-readme-medium.vercel.app/?username=mehrdad&limit=2)](https://dev.to/mehrdad)
+If you find my work valuable and would like to support me, you can send crypto donations to the following addresses. Every contribution helps me create more open-source projects and tutorials.
 
 </div>
--->
+
+<br/>
+
+<!-- ============ SUPPORT SECTION ============ -->
+<div align="center">
+
+| 💎 Network | 📍 Address | QR Code |
+|:---:|:---|:---:|
+| **TON** (Gram/Token) | `UQBQU9KnjwIsdSGwG08b3L43Vy_wPlCg_3FaK9m4N2Toj84k` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=UQBQU9KnjwIsdSGwG08b3L43Vy_wPlCg_3FaK9m4N2Toj84k" width="80" alt="TON QR"/> |
+| **TRC20** (USDT) | `TYbqxzEWrvYPnLvGtk6JY6Sbh8DMqfjcYq` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=TYbqxzEWrvYPnLvGtk6JY6Sbh8DMqfjcYq" width="80" alt="TRC20 QR"/> |
+| **Ethereum** (ETH/ERC-20) | `0x968C2fD883a2004276f5e627Fe38654137601c51` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=0x968C2fD883a2004276f5e627Fe38654137601c51" width="80" alt="ETH QR"/> |
+| **Bitcoin** (BTC) | `bc1q6knq0g4w9axt7t204y3e4hk4kz4zkh8vxj2e3a` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=bc1q6knq0g4w9axt7t204y3e4hk4kz4zkh8vxj2e3a" width="80" alt="BTC QR"/> |
+| **Solana** (SOL/SPL) | `7otC7qwCWqmrzbVA3XykjsZHbuKgrqaP2hE25NnByRDP` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=7otC7qwCWqmrzbVA3XykjsZHbuKgrqaP2hE25NnByRDP" width="80" alt="SOL QR"/> |
+| **BNB Chain** (BNB/BEP-20) | `0x968C2fD883a2004276f5e627Fe38654137601c51` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=0x968C2fD883a2004276f5e627Fe38654137601c51" width="80" alt="BNB QR"/> |
+| **Polygon** (MATIC/POL) | `0x968C2fD883a2004276f5e627Fe38654137601c51` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=0x968C2fD883a2004276f5e627Fe38654137601c51" width="80" alt="Polygon QR"/> |
+| **Tron** (TRX/TRC-20) | `TGYN1zzeGUjuXipVPvS4gTUivQyAu7GNUm` | <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=TGYN1zzeGUjuXipVPvS4gTUivQyAu7GNUm" width="80" alt="Tron QR"/> |
+
+</div>
+
+<br/>
+
+<div align="center">
+
+> ⚠️ **Important:** Only send the specified token on the correct network. Sending to the wrong network may result in permanent loss of funds.
+
+[![Sponsor](https://img.shields.io/badge/Sponsor_Me-GitHub_Sponsors-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/mehrdadmb2)
+[![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/mehrdadmb2)
+
+</div>
 
 ---
 
@@ -262,17 +279,75 @@ next_targets:
 
 <div align="center">
 
-I am open to collaborating on practical software, IoT, embedded systems and open-source projects.
+I'm always open to interesting conversations, collaboration opportunities, or just a friendly hello. Feel free to reach out through any of the channels below.
+
+</div>
 
 <br/>
 
-[![Discord](https://img.shields.io/badge/Discord-0mehrdad0-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/0mehrdad0)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mehrdad_MB-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mehrdad-mb-658520232)
-[![Instagram](https://img.shields.io/badge/Instagram-@_._.m._.b-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_._.m._.b)
-[![X](https://img.shields.io/badge/X-@__Mehrdad_-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/__Mehrdad_)
-[![Reddit](https://img.shields.io/badge/Reddit-Profile-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/user/u/IllustriousEssay4051)
+<!-- ============ CONTACT SECTION ============ -->
+<div align="center">
+
+| 📬 Channel | Contact Info |
+|:---:|:---|
+| **📧 Email** | [game.developer.mb@gmail.com](mailto:game.developer.mb@gmail.com) |
+| **💬 Telegram** | [@IIMehrdadII](https://t.me/IIMehrdadII) |
+| **📱 Instagram** | [@_._.m._.b](https://instagram.com/_._.m._.b) |
+| **📞 Phone** | [+98 903 193 7072](tel:+989031937072) |
+| **🐙 GitHub** | [mehrdadmb2](https://github.com/mehrdadmb2) |
+| **🔗 LinkedIn** | [Mehrdad MB](https://www.linkedin.com/in/mehrdad-mb-658520232) |
+| **🐦 X** | [@\_\_Mehrdad\_](https://x.com/__Mehrdad_) |
+| **🎮 Discord** | [0mehrdad0](https://discord.gg/0mehrdad0) |
 
 </div>
+
+<br/>
+
+<!-- ============ CONTACT FORM ============ -->
+<div align="center">
+
+### ✉️ Send Me a Message
+
+You can also reach me directly using the form below. I'll get back to you as soon as possible.
+
+</div>
+
+<div align="center">
+
+<a href="https://formspree.io/f/mlgqkwvj" target="_blank">
+  <img src="https://img.shields.io/badge/📩_Send_Message-Formspree-B44FE8?style=for-the-badge&logo=formspree&logoColor=white" alt="Contact Form"/>
+</a>
+
+</div>
+
+<br/>
+
+<!-- ============ FORM (HTML fallback) ============ -->
+<details>
+<summary><b>📝 Click here to use the embedded contact form</b></summary>
+
+<br/>
+
+<div align="center">
+
+<form action="https://formspree.io/f/mlgqkwvj" method="POST" style="max-width:500px; margin:0 auto; padding:1.5rem; background:#1a1a2e; border-radius:16px; border:1px solid #B44FE8;">
+  <div style="margin-bottom:1rem;">
+    <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #333; background:#0d0d0d; color:#fff; font-size:16px;">
+  </div>
+  <div style="margin-bottom:1rem;">
+    <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #333; background:#0d0d0d; color:#fff; font-size:16px;">
+  </div>
+  <div style="margin-bottom:1rem;">
+    <textarea name="message" rows="5" placeholder="Your Message" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #333; background:#0d0d0d; color:#fff; font-size:16px; resize:vertical;"></textarea>
+  </div>
+  <button type="submit" style="width:100%; padding:14px; border:none; border-radius:8px; background:linear-gradient(135deg, #B44FE8, #9D4EDD); color:#fff; font-size:18px; font-weight:700; cursor:pointer; transition:transform 0.2s;">
+    📤 Send Message
+  </button>
+</form>
+
+</div>
+
+</details>
 
 ---
 
