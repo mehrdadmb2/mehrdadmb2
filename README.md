@@ -1,12 +1,21 @@
 <div align="center">
 
 <a href="https://github.com/mehrdadmb2">
-  <img src="./assets/banner.svg" width="100%" alt="Mehrdad — Software Developer, IoT Builder and Embedded Systems Enthusiast"/>
+  <img src="./assets/banner.svg" width="100%" alt="Mehrdad — Software Developer, IoT Builder, Embedded Systems Enthusiast and 3D Designer"/>
 </a>
 
 <br/>
 
-<p><b>Computer Engineering</b> · <b>Software Development</b> · <b>IoT</b> · <b>Embedded Systems</b> · <b>3D Design</b></p>
+<table>
+<tr>
+<td align="center"><b>Software</b><br/><sub>Python · C/C++ · C# · Web</sub></td>
+<td align="center"><b>IoT</b><br/><sub>ESP32 · Arduino · Sensors</sub></td>
+<td align="center"><b>Systems</b><br/><sub>Linux · Networking · Docker</sub></td>
+<td align="center"><b>3D</b><br/><sub>Blender · C4D · SolidWorks</sub></td>
+</tr>
+</table>
+
+<br/>
 
 <a href="https://github.com/mehrdadmb2">GitHub</a> ·
 <a href="https://mehrdadmb2.github.io/mehrdad-dev/">Portfolio</a> ·
@@ -17,13 +26,31 @@
 
 <br/><br/>
 
-<sub>learn → build → test → ship → repeat</sub>
+<sub>learn → build → test → automate → ship → improve</sub>
 
 </div>
 
 ---
 
+<details open>
+<summary><b>🧭 Navigation</b></summary>
+
+<a href="#about--profile">About</a> ·
+<a href="#focus--engineering-domains">Focus</a> ·
+<a href="#stack--technology-map">Stack</a> ·
+<a href="#projects--featured-work">Projects</a> ·
+<a href="#stats--github-telemetry">Stats</a> ·
+<a href="#achievements--verified-milestones">Achievements</a> ·
+<a href="#support--donate">Support</a> ·
+<a href="#connect--contact">Contact</a>
+
+</details>
+
+---
+
 ## `~/about $ cat profile.json`
+
+### About <a id="about--profile"></a>
 
 ```json
 {
@@ -54,24 +81,26 @@
 >
 > I also work with Python, C/C++, C#, web technologies, Linux, Docker, Blender, SolidWorks and related development/design tooling.
 >
-> **Main goal:** keep learning, build useful products, document what works, and turn technical ideas into reality.
+> **Engineering principle:** keep systems observable, understandable, reliable and as independent from unnecessary third-party services as practical.
 
 ---
 
 ## `~/focus $ ls -la`
 
-| Area | What I Build / Explore |
+### Focus & Engineering Domains <a id="focus--engineering-domains"></a>
+
+| Domain | What I Build / Explore |
 |---|---|
 | 🧠 **Software Engineering** | Python utilities, desktop tools, automation, APIs, backend services and system-oriented software |
 | 🛰️ **IoT & Embedded** | ESP32, Arduino, sensors, OLED, RFID, SD logging, device-to-device communication and control |
-| 🌐 **Web & Dashboards** | Responsive admin panels, REST APIs, GitHub Pages, status views, history charts and monitoring interfaces |
+| 🌐 **Web & Dashboards** | Responsive admin panels, REST APIs, GitHub Pages, monitoring, history and data visualization |
 | 🐧 **Networking & Linux** | Diagnostics, Linux tooling, Nginx, Docker, self-hosting and network troubleshooting |
 | 🎨 **3D & Visual Design** | Blender, Cinema 4D, SolidWorks, modelling, rendering, compositing and visual effects |
 
 <details>
-<summary><b>Architecture mindset</b></summary>
+<summary><b>🧩 Architecture mindset</b></summary>
 
-I prefer systems that are observable, automatable and maintainable: clear interfaces, predictable data formats, local logs, graceful error handling and as few unnecessary external dependencies as practical.
+I prefer projects with explicit interfaces, predictable data formats, local logging, graceful error handling, reproducible builds and minimal unnecessary external dependencies.
 
 </details>
 
@@ -79,13 +108,11 @@ I prefer systems that are observable, automatable and maintainable: clear interf
 
 ## `~/stack $ neofetch --skills`
 
+### Technology Map <a id="stack--technology-map"></a>
+
 <div align="center">
-
 <img src="./assets/stack.svg" width="100%" alt="Mehrdad technology stack"/>
-
 </div>
-
-### Stack map
 
 | Category | Technologies |
 |---|---|
@@ -96,13 +123,25 @@ I prefer systems that are observable, automatable and maintainable: clear interf
 | **DevOps & Tools** | Git, GitHub, Docker, Linux, Bash, VS Code, Visual Studio |
 | **3D & Engineering** | Blender, Cinema 4D, SolidWorks |
 
+<details>
+<summary><b>🔍 How I use the stack</b></summary>
+
+**Hardware → firmware → API → dashboard → automation → logs**
+
+I enjoy projects where these layers meet instead of treating them as isolated technologies.
+
+</details>
+
 ---
 
 ## `~/projects $ find ./featured -maxdepth 1`
 
-### 🏠 Smart Home Hybrid IoT
+### Featured Work <a id="projects--featured-work"></a>
 
-A multi-device smart-home platform combining embedded devices, sensors, local storage and web control.
+<details open>
+<summary><b>🏠 Smart Home Hybrid IoT</b></summary>
+
+A multi-device smart-home platform combining embedded controllers, sensors, local storage, web monitoring and remote control.
 
 ```yaml
 features:
@@ -116,7 +155,10 @@ features:
   - Responsive admin dashboard
 ```
 
-### 📡 ESP32 Environmental Monitor
+</details>
+
+<details>
+<summary><b>📡 ESP32 Environmental Monitor</b></summary>
 
 A standalone monitoring node that reads environmental data, exposes status information and stores daily logs.
 
@@ -133,7 +175,10 @@ software:
   - Status/history APIs
 ```
 
-### 🛠️ Python Utility Applications
+</details>
+
+<details>
+<summary><b>🛠️ Python Utility Applications</b></summary>
 
 Tools focused on automation, network testing, data processing and system troubleshooting.
 
@@ -146,11 +191,16 @@ focus:
   - Portable builds
 ```
 
-### 🌐 Personal Developer Portfolio
+</details>
+
+<details>
+<summary><b>🌐 Personal Developer Portfolio</b></summary>
 
 A modern portfolio for presenting projects, skills, experiments and contact information.
 
-[Repository](https://github.com/mehrdadmb2/mehrdad-dev) · [Live website](https://mehrdadmb2.github.io/mehrdad-dev/)
+**[Open repository →](https://github.com/mehrdadmb2/mehrdad-dev)**  ·  **[Open live website →](https://mehrdadmb2.github.io/mehrdad-dev/)**
+
+</details>
 
 ---
 
@@ -176,6 +226,8 @@ next_targets:
 
 ## `~/stats $ ./github-analytics`
 
+### GitHub Telemetry <a id="stats--github-telemetry"></a>
+
 <div align="center">
 
 <img src="./metrics.svg" width="100%" alt="Locally generated GitHub profile telemetry"/>
@@ -194,11 +246,27 @@ next_targets:
 
 </div>
 
-> **How this works:** `scripts/generate_profile_assets.py` queries GitHub's GraphQL API with the workflow's automatic `GITHUB_TOKEN` and writes the SVGs into this repository. No GitHub Stats host, activity-graph host, contribution renderer or QR rendering service is required.
+<details>
+<summary><b>⚙️ How the telemetry is generated</b></summary>
 
-### External services intentionally retained
+The repository uses a small Python generator and GitHub's own API through the automatically provided workflow token.
 
-The profile keeps only services where the feature cannot be reproduced cleanly with repository-local static assets: the GitHub Trophy board and profile-view counter. Social links are plain text links rather than remote badge images.
+```text
+GitHub API
+    ↓
+scripts/generate_profile_assets.py
+    ↓
+┌─────────────────────────────────────────────┐
+│ metrics.svg                                  │
+│ profile-3d-contrib/profile-night-rainbow.svg│
+│ assets/snake.svg                             │
+│ assets/achievements.svg                      │
+└─────────────────────────────────────────────┘
+```
+
+No GitHub Stats host, external activity-graph renderer or QR-rendering service is required for the local visuals.
+
+</details>
 
 ---
 
@@ -211,36 +279,142 @@ The existing blog-post workflow can populate the section above from the configur
 
 ---
 
-## `~/achievements $ ls`
+## `~/achievements $ ./verify`
+
+### Verified Milestones <a id="achievements--verified-milestones"></a>
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=mehrdadmb2&theme=radical&no-frame=true&no-bg=true&margin-w=6&margin-h=8&column=7" width="100%" alt="GitHub trophies"/>
+<a href="https://github.com/mehrdadmb2?tab=achievements">
+<img src="./assets/achievements.svg" width="100%" alt="Locally generated GitHub milestones and profile achievements dashboard"/>
+</a>
 
-<br/>
+<br/><br/>
 
-<a href="https://github.com/mehrdadmb2?tab=achievements">View GitHub achievements</a>
+<a href="https://github.com/mehrdadmb2?tab=achievements"><b>Open the official GitHub Achievements page →</b></a>
 
 </div>
+
+<details>
+<summary><b>🏆 What is shown here?</b></summary>
+
+The local dashboard intentionally separates **verified repository/profile milestones** from GitHub's proprietary achievement badges.
+
+It is generated from data available through GitHub's API, such as contributions, repositories, stars, pull requests and issues. That means the cards are reproducible inside this repository and do not depend on a third-party trophy renderer.
+
+The official GitHub achievement badges remain available through the button above so the profile never pretends that a locally generated milestone is an official GitHub badge.
+
+</details>
 
 ---
 
-## `~/support $ ./donate --help`
+## `~/support $ ./donate --interactive`
+
+### Support <a id="support--donate"></a>
+
+If you find my work useful and want to support future open-source projects, the following addresses are available.
 
 <div align="center">
-
-If you find my work useful and want to support future open-source projects, you can use one of the networks below. The QR codes are generated locally and committed to this repository.
-
-<img src="./assets/donations.svg" width="100%" alt="Local crypto donation QR codes"/>
-
+<img src="./assets/donations.svg" width="100%" alt="Local cryptocurrency donation QR vault"/>
 </div>
 
-> ⚠️ **Safety:** verify the network, token and address before sending. Wrong-network transfers can be irreversible.
+### 📋 Copy-ready addresses
+
+> **Important:** The blocks below are intentionally separate from the graphic so GitHub's native **Copy** affordance can be used directly on every address.
+
+<details>
+<summary><b>🔵 TON</b></summary>
+
+**Network:** TON · Jetton/TON compatible address
+
+```text
+UQBQU9KnjwIsdSGwG08b3L43Vy_wPlCg_3FaK9m4N2Toj84k
+```
+
+</details>
+
+<details>
+<summary><b>🟢 TRC20 — USDT</b></summary>
+
+**Network:** TRON · TRC20
+
+```text
+TYbqxzEWrvYPnLvGtk6JY6Sbh8DMqfjcYq
+```
+
+</details>
+
+<details>
+<summary><b>🟣 Ethereum — ETH / ERC-20</b></summary>
+
+**Network:** Ethereum · ERC-20
+
+```text
+0x968C2fD883a2004276f5e627Fe38654137601c51
+```
+
+</details>
+
+<details>
+<summary><b>🟠 Bitcoin — BTC</b></summary>
+
+**Network:** Bitcoin
+
+```text
+bc1q6knq0g4w9axt7t204y3e4hk4kz4zkh8vxj2e3a
+```
+
+</details>
+
+<details>
+<summary><b>🟢 Solana — SOL / SPL</b></summary>
+
+**Network:** Solana
+
+```text
+7otC7qwCWqmrzbVA3XykjsZHbuKgrqaP2hE25NnByRDP
+```
+
+</details>
+
+<details>
+<summary><b>🟡 BNB Chain — BNB / BEP-20</b></summary>
+
+**Network:** BNB Smart Chain · BEP-20
+
+```text
+0x968C2fD883a2004276f5e627Fe38654137601c51
+```
+
+</details>
+
+<details>
+<summary><b>🟪 Polygon — POL / ERC-20</b></summary>
+
+**Network:** Polygon
+
+```text
+0x968C2fD883a2004276f5e627Fe38654137601c51
+```
+
+</details>
+
+<details>
+<summary><b>🔴 Tron — TRX / TRC-20</b></summary>
+
+**Network:** Tron · TRC-20
+
+```text
+TGYN1zzeGUjuXipVPvS4gTUivQyAu7GNUm
+```
+
+</details>
+
+> ⚠️ **Always verify the network, token and full address before sending.** A valid-looking address on the wrong network can still result in permanent loss.
 
 <div align="center">
 
-[![Sponsor](https://img.shields.io/badge/Sponsor_Me-GitHub_Sponsors-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/mehrdadmb2)
-[![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/mehrdadmb2)
+**[GitHub Sponsors](https://github.com/sponsors/mehrdadmb2)**  ·  **[Buy Me a Coffee](https://www.buymeacoffee.com/mehrdadmb2)**
 
 </div>
 
@@ -248,13 +422,24 @@ If you find my work useful and want to support future open-source projects, you 
 
 ## `~/connect $ cat contact.md`
 
+### Contact & Collaboration <a id="connect--contact"></a>
+
 <div align="center">
 
-I'm open to interesting conversations, collaboration opportunities, software projects and open-source work.
+<table>
+<tr>
+<td align="center"><b>💬 Fastest</b><br/><a href="https://t.me/IIMehrdadII">Telegram →</a></td>
+<td align="center"><b>📧 Direct</b><br/><a href="mailto:game.developer.mb@gmail.com">Email →</a></td>
+<td align="center"><b>💼 Professional</b><br/><a href="https://www.linkedin.com/in/mehrdad-mb-658520232">LinkedIn →</a></td>
+<td align="center"><b>🧑‍💻 Technical</b><br/><a href="https://github.com/mehrdadmb2">GitHub →</a></td>
+</tr>
+</table>
 
 </div>
 
-| Channel | Contact |
+<br/>
+
+| Channel | Direct action |
 |---|---|
 | 📧 **Email** | [game.developer.mb@gmail.com](mailto:game.developer.mb@gmail.com) |
 | 💬 **Telegram** | [@IIMehrdadII](https://t.me/IIMehrdadII) |
@@ -265,18 +450,35 @@ I'm open to interesting conversations, collaboration opportunities, software pro
 | 🐦 **X** | [@__Mehrdad_](https://x.com/__Mehrdad_) |
 | 🎮 **Discord** | [0mehrdad0](https://discord.gg/0mehrdad0) |
 
-### ✉️ Contact / Collaboration
+### 🚀 Collaboration launcher
 
-GitHub-native contact is used instead of an external form provider:
+Choose the path that matches what you want to discuss:
 
-**[Open the Contact / Collaboration form](https://github.com/mehrdadmb2/mehrdadmb2/issues/new?template=contact.yml)**
-
-For direct email, use [game.developer.mb@gmail.com](mailto:game.developer.mb@gmail.com).
+| Need | Recommended route |
+|---|---|
+| **Project / freelance** | [Send an email](mailto:game.developer.mb@gmail.com?subject=Project%20Inquiry) |
+| **Technical question** | [Open a GitHub contact issue](https://github.com/mehrdadmb2/mehrdadmb2/issues/new?template=contact.yml) |
+| **Open-source collaboration** | [Open a GitHub issue](https://github.com/mehrdadmb2/mehrdadmb2/issues/new?template=contact.yml) |
+| **Quick message** | [Message me on Telegram](https://t.me/IIMehrdadII) |
+| **Professional networking** | [Connect on LinkedIn](https://www.linkedin.com/in/mehrdad-mb-658520232) |
 
 <details>
-<summary><b>Why not an embedded HTML form?</b></summary>
+<summary><b>✉️ GitHub-native contact form</b></summary>
 
-GitHub profile README pages are not a general-purpose web-app host. A `<form>` tag also requires an external endpoint or a backend. The new approach keeps the interaction GitHub-native, versioned with the repository, and avoids Formspree while preserving a structured contact flow.
+The repository includes a structured GitHub Issue Form so no third-party form provider is required.
+
+**[Open Contact / Collaboration Form →](https://github.com/mehrdadmb2/mehrdadmb2/issues/new?template=contact.yml)**
+
+Please do **not** publish passwords, API tokens, private keys, seed phrases or other secrets in a public issue.
+
+</details>
+
+<details>
+<summary><b>🔐 Privacy & contact preference</b></summary>
+
+For sensitive or private topics, prefer direct email rather than creating a public GitHub issue.
+
+For technical topics that benefit from public documentation or community visibility, a GitHub issue is usually the better route.
 
 </details>
 
@@ -296,25 +498,36 @@ GitHub profile README pages are not a general-purpose web-app host. A `<form>` t
 <br/>
 
 <div align="center">
-
-<img src="./assets/footer.svg" width="100%" alt="Profile footer"/>
-
+<img src="./assets/footer.svg" width="100%" alt="Mehrdad profile footer"/>
 </div>
 
-### Repository maintenance
+<details>
+<summary><b>🔧 Repository maintenance</b></summary>
 
-The profile visual pipeline is intentionally small:
+The profile visuals are generated locally by GitHub Actions from repository-owned source code.
 
 ```text
-GitHub GraphQL API
-        │
-        ▼
+.github/workflows/profile-assets.yml
+            │
+            ▼
 scripts/generate_profile_assets.py
-        │
-        ├── metrics.svg
-        ├── profile-3d-contrib/profile-night-rainbow.svg
-        └── assets/snake.svg
+            │
+            ├── metrics.svg
+            ├── achievements.svg
+            ├── profile-3d-contrib/profile-night-rainbow.svg
+            └── assets/snake.svg
 ```
 
-The scheduled workflow runs once per day and can also be triggered manually from **Actions → Generate local profile visuals → Run workflow**.
+The pipeline is scheduled daily and can also be triggered manually from **Actions → Generate local profile visuals → Run workflow**.
 
+</details>
+
+<div align="center">
+
+```text
+[ system status ]  Online.
+[ current task  ]  Learning, building and improving.
+[ next command  ]  git push origin future
+```
+
+</div>

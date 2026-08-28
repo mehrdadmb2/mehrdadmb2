@@ -5,6 +5,7 @@ Outputs:
   - metrics.svg
   - profile-3d-contrib/profile-night-rainbow.svg
   - assets/snake.svg
+  - assets/achievements.svg
 
 Uses only Python's standard library and GitHub's GraphQL API.
 For GitHub Actions, the automatically provided GITHUB_TOKEN is used.
@@ -247,6 +248,55 @@ def make_3d(days: list[dict]) -> str:
     return svg_doc(1180, 430, body, 'Three dimensional contribution graph')
 
 
+
+def milestone_badges(user: dict, days: list[dict]) -> list[tuple[str, str, str]]:
+    cc = user["contributionsCollection"]
+    repos = user["repositories"]["totalCount"]
+    followers = user["followers"]["totalCount"]
+    stars = sum(repo["stargazerCount"] for repo in user["repositories"]["nodes"])
+    contributions = cc["contributionCalendar"]["totalContributions"]
+    prs = cc["totalPullRequestContributions"]
+    issues = cc["totalIssueContributions"]
+    candidates = [
+        (contributions >= 100, "100+", "CONTRIBUTIONS", f"{contributions:,} recorded"),
+        (contributions >= 1000, "1K+", "CONTRIBUTIONS", f"{contributions:,} recorded"),
+        (repos >= 10, "10+", "REPOSITORIES", f"{repos:,} owned"),
+        (stars >= 10, "10+", "STARS", f"{stars:,} across owned repos"),
+        (prs >= 10, "10+", "PULL REQUESTS", f"{prs:,} contributions"),
+        (issues >= 10, "10+", "ISSUES", f"{issues:,} contributions"),
+        (followers >= 10, "10+", "FOLLOWERS", f"{followers:,} followers"),
+    ]
+    return [(badge, title, detail) for ok, badge, title, detail in candidates if ok]
+
+
+def make_achievements(user: dict, days: list[dict]) -> str:
+    badges = milestone_badges(user, days)
+    if not badges:
+        badges = [("01", "PROFILE", "Milestones will appear as the profile grows")]
+    body = [
+        '<g font-family="Segoe UI,Arial,sans-serif">',
+        '<text x="42" y="46" fill="url(#accent)" font-size="25" font-weight="800">ACHIEVEMENTS // VERIFIED MILESTONES</text>',
+        '<text x="42" y="69" fill="#bca9ca" font-size="12">Repository-local milestones generated from GitHub API data • not a third-party trophy renderer</text>',
+    ]
+    cols=3
+    for i,(badge,title,detail) in enumerate(badges):
+        col=i%cols; row=i//cols; x=42+col*304; y=92+row*92
+        body += [
+            f'<rect x="{x}" y="{y}" width="280" height="72" rx="16" fill="#120c19" stroke="#33203d"/>',
+            f'<circle cx="{x+34}" cy="{y+36}" r="22" fill="#24122f" stroke="#7a2fa3"/>',
+            f'<text x="{x+34}" y="{y+41}" fill="#e0aaff" font-size="12" font-weight="800" text-anchor="middle">{esc(badge)}</text>',
+            f'<text x="{x+68}" y="{y+29}" fill="#f5efff" font-size="11" font-weight="800">{esc(title)}</text>',
+            f'<text x="{x+68}" y="{y+49}" fill="#bca9ca" font-size="10">{esc(detail)}</text>',
+        ]
+    body += [
+        '<rect x="42" y="315" width="956" height="54" rx="14" fill="#0f0915" stroke="#2d1c35"/>',
+        '<text x="62" y="338" fill="#e0aaff" font-size="11" font-weight="800">OFFICIAL GITHUB ACHIEVEMENTS</text>',
+        '<text x="62" y="357" fill="#bca9ca" font-size="10">Use the button in README to open GitHub’s own achievement view. Local cards never claim proprietary GitHub badges.</text>',
+        '</g>'
+    ]
+    rows=(len(badges)+cols-1)//cols
+    return svg_doc(1040, 385 if rows<=3 else 475, ''.join(body), 'Mehrdad verified GitHub milestones')
+
 def make_snake(days: list[dict]) -> str:
     selected = days[-364:]
     max_count = max((d["contributionCount"] for d in selected), default=1)
@@ -285,6 +335,7 @@ def main() -> None:
     days = calendar_days(user)
     outputs = {
         ROOT / 'metrics.svg': make_metrics(user, days),
+        ROOT / 'assets' / 'achievements.svg': make_achievements(user, days),
         ROOT / 'profile-3d-contrib' / 'profile-night-rainbow.svg': make_3d(days),
         ROOT / 'assets' / 'snake.svg': make_snake(days),
     }
