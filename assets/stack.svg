@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 310" role="img" aria-label="Mehrdad technology stack">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="0" y="0" width="1600" height="310" rx="24" fill="#090A12" stroke="#8B5CF6" stroke-opacity=".35"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <g transform="translate(40 38)">
+      <text x="0" y="0" fill="#E9D5FF" font-weight="700" font-size="19">LANGUAGES</text>
+      <text x="0" y="33" fill="#C4B5FD" font-size="16">Python · C · C++ · C# · JavaScript</text>
+      <text x="0" y="57" fill="#94A3B8" font-size="16">HTML · CSS</text>
+    </g>
+    <g transform="translate(40 138)">
+      <text x="0" y="0" fill="#E9D5FF" font-weight="700" font-size="19">EMBEDDED &amp; IOT</text>
+      <text x="0" y="33" fill="#C4B5FD" font-size="16">ESP32 · Arduino · Raspberry Pi</text>
+      <text x="0" y="57" fill="#94A3B8" font-size="16">DHT22 · OLED · RFID · SPI · I²C</text>
+    </g>
+    <g transform="translate(545 38)">
+      <text x="0" y="0" fill="#E9D5FF" font-weight="700" font-size="19">BACKEND &amp; DATA</text>
+      <text x="0" y="33" fill="#C4B5FD" font-size="16">.NET · Node.js · REST APIs</text>
+      <text x="0" y="57" fill="#94A3B8" font-size="16">SQLite · MySQL · SQL Server</text>
+    </g>
+    <g transform="translate(545 138)">
+      <text x="0" y="0" fill="#E9D5FF" font-weight="700" font-size="19">DEVOPS &amp; SYSTEMS</text>
+      <text x="0" y="33" fill="#C4B5FD" font-size="16">Git · GitHub · Docker · Linux · Bash</text>
+      <text x="0" y="57" fill="#94A3B8" font-size="16">Nginx · VS Code · Visual Studio</text>
+    </g>
+    <g transform="translate(1045 38)">
+      <text x="0" y="0" fill="#E9D5FF" font-weight="700" font-size="19">3D &amp; ENGINEERING</text>
+      <text x="0" y="33" fill="#C4B5FD" font-size="16">Blender · Cinema 4D · SolidWorks</text>
+      <text x="0" y="57" fill="#94A3B8" font-size="16">Modeling · Rendering · Visual Effects</text>
+    </g>
+    <g transform="translate(1045 138)">
+      <text x="0" y="0" fill="#E9D5FF" font-weight="700" font-size="19">ENGINEERING VALUES</text>
+      <text x="0" y="33" fill="#C4B5FD" font-size="16">Reliability · Portability · Observability</text>
+      <text x="0" y="57" fill="#94A3B8" font-size="16">Clean architecture · Useful automation</text>
+    </g>
+  </g>
+  <path d="M510 26v258M1010 26v258" stroke="url(#g)" stroke-opacity=".35"/>
+  <path d="M25 105h1550M25 205h1550" stroke="#A78BFA" stroke-opacity=".08"/>
+  <g fill="#67E8F9" filter="url(#glow)">
+    <circle cx="505" cy="155" r="3"/>
+    <circle cx="1005" cy="155" r="3"/>
+  </g>
+</svg>
