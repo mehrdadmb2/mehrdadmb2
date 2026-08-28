@@ -1,37 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Mehrdad — Software Developer, IoT Builder, Embedded Systems Enthusiast</title>
+  <desc id="desc">A futuristic purple developer profile banner with a terminal, connected nodes and animated light accents.</desc>
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d0d0d"/>
-      <stop offset="100%" stop-color="#1a1a2e"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07050b"/><stop offset=".48" stop-color="#160b22"/><stop offset="1" stop-color="#241039"/>
     </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#B44FE8"/>
-      <stop offset="100%" stop-color="#E0AAFF"/>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a2fa3"/><stop offset=".55" stop-color="#b44fe8"/><stop offset="1" stop-color="#e0aaff"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".13"/><stop offset="1" stop-color="#ffffff" stop-opacity=".03"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#b44fe8" stroke-opacity=".075"/></pattern>
   </defs>
+  <rect width="1200" height="360" rx="30" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1164" height="324" rx="24" fill="url(#grid)"/>
+  <circle cx="1030" cy="100" r="115" fill="#b44fe8" opacity=".08" filter="url(#glow)"/>
+  <circle cx="210" cy="275" r="150" fill="#7a2fa3" opacity=".07" filter="url(#glow)"/>
 
-  <!-- پس‌زمینه -->
-  <!-- پس‌زمینه -->
-  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  <!-- network -->
+  <g stroke="#b44fe8" stroke-opacity=".28" fill="none">
+    <path d="M75 70L175 125L115 225L240 300L330 240"/>
+    <path d="M910 68L1010 135L1090 92L1140 210L1040 280L950 230"/>
+  </g>
+  <g fill="#e0aaff" filter="url(#glow)">
+    <circle cx="75" cy="70" r="4"/><circle cx="175" cy="125" r="4"/><circle cx="115" cy="225" r="4"/><circle cx="240" cy="300" r="4"/>
+    <circle cx="910" cy="68" r="4"/><circle cx="1010" cy="135" r="4"/><circle cx="1090" cy="92" r="4"/><circle cx="1140" cy="210" r="4"/><circle cx="1040" cy="280" r="4"/>
+  </g>
 
-  <!-- مدار تزئینی -->
-  <path d="M20 180 L80 140 L140 160 L200 120 L260 130 L320 90" stroke="#B44FE8" stroke-width="2" fill="none" opacity="0.3"/>
-  <circle cx="20" cy="180" r="3" fill="#B44FE8" opacity="0.3"/>
-  <circle cx="320" cy="90" r="3" fill="#B44FE8" opacity="0.3"/>
+  <!-- terminal -->
+  <g transform="translate(790 208) rotate(-7)">
+    <rect x="0" y="0" width="240" height="104" rx="18" fill="url(#glass)" stroke="#e0aaff" stroke-opacity=".23"/>
+    <circle cx="24" cy="22" r="5" fill="#e0aaff"/><circle cx="42" cy="22" r="5" fill="#b44fe8"/><circle cx="60" cy="22" r="5" fill="#7a2fa3"/>
+    <text x="24" y="55" font-family="Consolas,monospace" font-size="13" fill="#d8c5e3">$ build useful things</text>
+    <text x="24" y="77" font-family="Consolas,monospace" font-size="13" fill="#b44fe8">&gt; system: online_</text>
+  </g>
 
-  <!-- متن اصلی -->
-  <text x="400" y="90" text-anchor="middle" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="52" font-weight="bold" fill="url(#textGrad)" filter="url(#glow)">MEHRDAD</text>
+  <g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <text x="600" y="132" fill="url(#accent)" font-size="78" font-weight="900" letter-spacing="8" filter="url(#glow)">MEHRDAD</text>
+    <text x="600" y="176" fill="#f3e8ff" font-size="20" font-weight="700">SOFTWARE DEVELOPER  •  IoT BUILDER  •  EMBEDDED SYSTEMS</text>
+    <text x="600" y="211" fill="#c4b1d1" font-size="14">Python · C/C++ · C# · ESP32 · Arduino · Linux · Docker · Web · 3D</text>
+  </g>
 
-  <!-- زیرنویس -->
-  <text x="400" y="130" text-anchor="middle" font-family="'Courier New', monospace" font-size="18" fill="#E0AAFF" opacity="0.8">Software Developer | IoT Builder | Embedded Systems Enthusiast</text>
+  <path d="M392 241H808" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+  <circle cx="392" cy="241" r="4" fill="#e0aaff"><animate attributeName="opacity" values=".25;1;.25" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="808" cy="241" r="4" fill="#e0aaff"><animate attributeName="opacity" values="1;.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
 
-  <!-- خط جداکننده -->
-  <line x1="200" y1="150" x2="600" y2="150" stroke="#B44FE8" stroke-width="1" opacity="0.4"/>
+  <text x="600" y="292" text-anchor="middle" font-family="Consolas,monospace" font-size="14" fill="#bca9ca">learn → build → test → ship → repeat</text>
 </svg>
