@@ -1,151 +1,134 @@
-# Mehrdad profile — setup
+# Setup — read this once after uploading
 
-This package is designed to replace the current profile README and profile workflows while keeping the major sections and adding a cleaner Metrics-first architecture.
+Everything the README references now actually exists in this repo. This file is
+the one-time checklist to make it render fully on GitHub.
 
-## 1. Files to replace
+## 1. Create the METRICS_TOKEN secret
 
-Use the files from this package as the new source of truth.
+Both `metrics.yml` and `snake.yml` need one classic Personal Access Token.
 
-```text
-README.md
-.github/workflows/metrics.yml
-.github/workflows/blog-posts.yml
-.github/ISSUE_TEMPLATE/contact.yml
-.github/ISSUE_TEMPLATE/config.yml
-assets/banner.svg
-assets/status.svg
-assets/footer.svg
-assets/stack.svg
-assets/snake.svg
-assets/snake-dark.svg
-assets/qr/*.svg
-scripts/generate_qr.py
-scripts/generate_visual_assets.py
-```
+1. Go to <https://github.com/settings/tokens/new>.
+2. Scopes: **`repo`** and **`read:user`**. (Public-only profile → `public_repo` instead of full `repo` also works.)
+3. Copy the token.
+4. In this repository: `Settings → Secrets and variables → Actions → New repository secret`.
+5. Name: `METRICS_TOKEN`. Value: the token. Save.
 
-Remove conflicting old workflows that generate the same output files. In particular, do not keep multiple Metrics workflows writing `metrics*.svg` at the same time.
+Nothing else needs a secret — `blog-posts.yml` and the commit step in `snake.yml`
+use the automatic `GITHUB_TOKEN` that every workflow already has.
 
-## 2. Metrics token
+## 2. First run
 
-Create a repository secret named `METRICS_TOKEN`.
+`Actions` tab → run each of these once manually (▸ *Run workflow*), in order:
 
-The token is used only by the official `lowlighter/metrics` Action and is not written into the repository. The Metrics documentation shows `METRICS_TOKEN` in its GitHub Actions setup examples and uses `contents: write` for workflows that commit rendered SVGs. 
+1. **Profile Metrics** — takes ~1–2 minutes, writes all 10 `metrics.*.svg` files.
+2. **Contribution Snake** — writes `assets/snake.svg` / `assets/snake-dark.svg`.
+3. **Blog Posts** — fills in the section between the `BLOG-POST-LIST` markers.
 
-Recommended approach:
+Then open the profile README and confirm every image loads. After this, all
+three run on their own schedule (see each workflow's `cron:` line) and again on
+every push to `main`.
 
-1. Create a dedicated GitHub personal access token for this workflow.
-2. Give it the minimum scopes required by the plugins you enable.
-3. Add it under `Settings → Secrets and variables → Actions → New repository secret`.
-4. Name it exactly `METRICS_TOKEN`.
+## 3. What each workflow owns
 
-If you do not need private repositories or private contribution data, keep the token scoped as narrowly as practical.
+| File | Generates | Schedule | Token |
+|---|---|---|---|
+| `.github/workflows/metrics.yml` | `metrics.svg` + 9 more `metrics.*.svg` | daily 03:00 UTC | `METRICS_TOKEN` |
+| `.github/workflows/snake.yml` | `assets/snake.svg`, `assets/snake-dark.svg` | daily 04:00 UTC | `METRICS_TOKEN` (read) + `GITHUB_TOKEN` (commit) |
+| `.github/workflows/blog-posts.yml` | text between the `BLOG-POST-LIST` markers | daily 05:00 UTC | `GITHUB_TOKEN` |
 
-## 3. Why Metrics is split into multiple SVG files
-
-One giant SVG becomes difficult to read and slower to diagnose. The profile therefore keeps a main dashboard plus focused renders:
-
-```text
-metrics.svg
-metrics.isocalendar.svg
-metrics.languages.svg
-metrics.achievements.svg
-metrics.habits.svg
-metrics.notable.svg
-metrics.activity.svg
-metrics.repositories.svg
-metrics.calendar.svg
-metrics.lines.svg
-```
-
-The Metrics project explicitly supports these plugin families, including isocalendar, languages, achievements, habits, notable contributions, recent activity, repositories and commit calendar. 
+`metrics.yml` runs each `metrics.*.svg` as its own step with
+`if: success() || failure()`, so one plugin failing (rate limit, transient API
+error) can't take the other nine images down with it — that's exactly what left
+9 of 10 metrics images permanently broken before this setup existed.
 
 ## 4. Versioning
 
-The workflow pins the Metrics Action to `v3.34` instead of `latest`. The Metrics project currently lists version 3.34 as its latest release in the public release history. 
-
-This gives you reproducible runs. When you intentionally upgrade, change `@v3.34` in one controlled pull request, then review the generated SVGs.
+- `lowlighter/metrics` is pinned to **`@v3.34`** — an exact version, not
+  `@latest`, so a future upstream release can't silently change the images.
+  v3.34 also fixes a real bug where the achievements plugin could crash after
+  GitHub sunset "Projects (classic)". Upgrade deliberately: change `@v3.34` in
+  one commit, then check the rendered SVGs before merging.
+- `gautamkrishnar/blog-post-workflow` is pinned to **`@v1`** (floating major
+  version, not an exact patch) — its output is just text, so tracking the
+  latest 1.x bugfixes automatically is lower-risk than for the Metrics images.
 
 ## 5. Timezone
 
-The profile uses `Asia/Baku` because that is the intended current timezone for this profile setup. Change the `config_timezone` values in `.github/workflows/metrics.yml` if your activity needs a different display timezone.
+`config_timezone: Asia/Baku` in `metrics.yml` controls how day boundaries are
+computed for the habits/activity plugins. Change both occurrences if a
+different display timezone is wanted.
 
-## 6. Blog workflow
+## 6. Blog feed
 
-The current feed workflow is retained so that the blog feature is not lost. It uses `gautamkrishnar/blog-post-workflow@1.9.6`, which is the latest Marketplace version currently listed. The README must keep these markers exactly as written:
-
-```html
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-```
-
-Edit `feed_list` when your real feeds differ.
+`blog-posts.yml` defaults `feed_list` to this profile's own GitHub Atom feed
+(`https://github.com/mehrdadmb2.atom`), so the `~/blog $ tail -n 6 latest.log`
+section reads like a real activity log immediately, with no setup. The moment
+there's an actual blog, newsletter, or Dev.to/Medium profile, replace that URL
+with its RSS/Atom feed — comma-separate multiple feeds if there's more than
+one. Keep the `<!-- BLOG-POST-LIST:START -->` / `<!-- BLOG-POST-LIST:END -->`
+markers in `README.md` exactly as they are; the workflow writes between them.
 
 ## 7. Donation QR codes
 
-QR images are stored locally in `assets/qr/` and are generated from the addresses in `scripts/generate_qr.py`.
-
-No QR rendering API is called at README-view time.
-
-To regenerate them locally:
+QR images live in `assets/qr/` and are generated locally by
+`scripts/generate_qr.py` from the addresses hard-coded in that file — no QR
+rendering API is called when someone views the README. To regenerate after
+changing an address:
 
 ```bash
-python -m pip install qrcode[pil]==8.2
+python -m pip install "qrcode[pil]"
 python scripts/generate_visual_assets.py
 ```
 
-QR files are committed to the repository. The QR generator script is provided for maintenance when an address changes; it is not part of the profile-view dependency chain.
+Then commit the changed SVGs under `assets/qr/`.
 
-## 9. Contact
+## 8. Contact form
 
-The contact flow is now GitHub-native through `.github/ISSUE_TEMPLATE/contact.yml`. GitHub issue forms support structured fields such as inputs, dropdowns, text areas and checkboxes. They are stored in the `.github/ISSUE_TEMPLATE` directory and are available from the repository's default branch. 
+The "Open Contact / Collaboration Form" link in the README points at
+`.github/ISSUE_TEMPLATE/contact.yml`, a GitHub Issue Form. `config.yml` in the
+same folder disables blank issues and adds quick links (email, Telegram,
+LinkedIn) next to the form. Both need to be on the repo's default branch to
+take effect — they will be, once this package is uploaded.
 
-The form creates a public issue, so private details should be sent through email instead.
+## 9. One-time repo cleanup
 
-## 10. Important migration note
+`scripts/__pycache__/` was previously committed by accident. `.gitignore` now
+excludes it, but that only stops *new* commits from adding it back — it won't
+remove what's already tracked. Run this once after uploading:
 
-Do not keep both `Readme.md` and `README.md` as competing profile entry points. Make `README.md` the canonical file and remove the old conflicting version if it exists.
-
-Likewise, do not keep the old Metrics / 3D / snake workflows running in parallel with the new workflow.
-
-## 11. First run
-
-After pushing the files:
-
-1. Open the repository `Actions` tab.
-2. Run `Profile Metrics` manually.
-3. Run `Contribution Snake` once.
-4. Run `Latest blog posts` once.
-5. Return to the profile README and verify every generated SVG renders.
-
-## 12. If an output is blank
-
-Check the corresponding workflow run. The most common causes are:
-
-- missing or insufficient `METRICS_TOKEN` permissions;
-- a Metrics plugin requiring an additional scope;
-- an invalid plugin option after a version upgrade;
-- a feed URL that does not expose RSS/Atom content;
-- repository Actions permissions not allowing `contents: write`.
-
-## 13. Architecture
-
-```text
-                         GitHub profile repository
-                                  │
-                ┌─────────────────┴─────────────────┐
-                │                                   │
-        lowlighter/metrics                    Local assets
-                │                                   │
-       GitHub data → SVGs                    SVG + local QR
-                │                                   │
-                └─────────────────┬─────────────────┘
-                                  │
-                              README.md
-                                  │
-                 ┌────────────────┼────────────────┐
-                 │                │                │
-             analytics         identity          contact
-             panels            visuals          Issue Form
+```bash
+git rm -r --cached scripts/__pycache__
+git commit -m "chore: stop tracking compiled Python cache"
+git push
 ```
 
-The goal is to make the profile visual layer repository-owned while still using the official Metrics engine for the difficult GitHub analytics work.
+## 10. If an image stays blank
+
+Check the failing step's log under the `Actions` tab first. Common causes:
+
+- `METRICS_TOKEN` missing, expired, or missing the `read:user` scope
+- repository setting `Settings → Actions → General → Workflow permissions` set
+  to "Read repository contents" instead of allowing `contents: write` (the
+  workflows already declare `permissions: contents: write`, but an
+  organization/repo-level lockdown can still override it)
+- a feed in `feed_list` that doesn't actually expose RSS/Atom XML
+
+## Architecture
+
+```text
+                       GitHub profile repository
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                 │
+      lowlighter/metrics   generate_snake.py   local assets
+      (GitHub data → SVG)  (GitHub data → SVG)  (SVG + QR, static)
+              │                 │                 │
+              └─────────────────┼─────────────────┘
+                                │
+                            README.md
+                                │
+              ┌─────────────────┼─────────────────┐
+              │                 │                 │
+          analytics         identity           contact
+          panels            visuals           Issue Form
+```

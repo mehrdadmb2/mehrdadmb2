@@ -33,15 +33,15 @@
 <details>
 <summary><b>⚡ Quick navigation</b></summary>
 <br>
-<a href="#-whoami">Whoami</a> ·
-<a href="#-focus">Focus</a> ·
-<a href="#-stack">Stack</a> ·
-<a href="#-featured-builds">Builds</a> ·
-<a href="#-github-command-center">GitHub command center</a> ·
-<a href="#-achievements">Achievements</a> ·
-<a href="#-contributions">Contributions</a> ·
-<a href="#-support">Support</a> ·
-<a href="#-connect">Connect</a>
+<a href="#whoami">Whoami</a> ·
+<a href="#focus">Focus</a> ·
+<a href="#stack">Stack</a> ·
+<a href="#featured-builds">Builds</a> ·
+<a href="#github-command-center">GitHub command center</a> ·
+<a href="#achievements">Achievements</a> ·
+<a href="#contributions">Contributions</a> ·
+<a href="#support">Support</a> ·
+<a href="#connect">Connect</a>
 </details>
 
 <br>
@@ -52,6 +52,7 @@
 
 ---
 
+<a id="whoami"></a>
 ## `~/whoami $ cat profile.json`
 
 ```json
@@ -90,6 +91,7 @@
 
 ---
 
+<a id="focus"></a>
 ## `~/focus $ ls --profile`
 
 | Domain | Current direction |
@@ -103,6 +105,7 @@
 
 ---
 
+<a id="stack"></a>
 ## `~/stack $ neofetch --skills`
 
 <div align="center">
@@ -126,61 +129,74 @@
 
 ---
 
+<a id="featured-builds"></a>
 ## `~/projects $ tree ./featured`
 
-### 🏠 Smart Home Hybrid IoT
+### 🏠 SmartHome Hybrid IoT
 
-A multi-device IoT platform designed around local sensing, embedded control, storage and a web administration layer.
+A resilient, multi-node IoT platform: ESP32 sensor nodes and an Arduino-based RFID door-access node work together, log to SD storage, sync to a local dashboard, and keep working even when the network drops.
 
 ```yaml
 architecture:
   master:
     - ESP32 / ESP32-S3
-    - OLED status
-    - sensor collection
-    - network communication
+    - SSD1306 OLED status display
+    - DHT22 temperature & humidity sensing
+    - Wi-Fi + GitHub Pages sync
   slave:
-    - Arduino
-    - RFID reader
-    - relay / door control
-    - local peripherals
+    - Arduino UNO
+    - MFRC522 RFID reader
+    - Relay-driven door / lock control
   data:
-    - SD card
-    - daily logs
-    - historical readings
-    - downloadable records
+    - SD card CSV logging
+    - Historical readings
+    - Downloadable records
   interface:
-    - responsive dashboard
-    - REST-like endpoints
-    - system health
-    - device communication status
+    - Local dashboard with charts
+    - Auto-recovery on node / network failure
 ```
 
 <details>
-<summary><b>🔍 System capabilities</b></summary>
+<summary><b>🔍 Related repositories</b></summary>
 <br>
 
-`Environmental monitoring` · `Temperature & humidity history` · `SD logging` · `OLED status` · `RFID access control` · `Remote door control` · `REST communication` · `Responsive administration`
+[`SmartHome-Hybrid-IoT`](https://github.com/mehrdadmb2/SmartHome-Hybrid-IoT) · [`Arduino-RFID-Relay-Control`](https://github.com/mehrdadmb2/Arduino-RFID-Relay-Control) · [`ESP32-RFID-DHT-OLED-WebDashboard`](https://github.com/mehrdadmb2/ESP32-RFID-DHT-OLED-WebDashboard) · [`esp32-dht22-data-logger`](https://github.com/mehrdadmb2/esp32-dht22-data-logger)
 
 </details>
 
 ### 📡 ESP32 Environmental Monitor
 
+Dual-node environmental monitoring: DHT22 sensors feed a live web dashboard and an on-device OLED, with SD card logging and historical charts for offline review.
+
 ```yaml
 hardware:
-  - ESP32
+  - ESP32 (dual-node)
   - DHT22
-  - OLED
+  - SSD1306 OLED
   - MicroSD
 software:
   - Wi-Fi
-  - local data logging
-  - daily files
-  - status display
-  - history endpoints
+  - web dashboard with historical charts
+  - local + remote data logging
 ```
 
-### 🛠️ Python Utility Applications
+<details>
+<summary><b>🔍 Related repositories</b></summary>
+<br>
+
+[`ESP32-DualNode-Environmental-Monitor`](https://github.com/mehrdadmb2/ESP32-DualNode-Environmental-Monitor) · [`ESP32-DHT22-OLED-Monitor`](https://github.com/mehrdadmb2/ESP32-DHT22-OLED-Monitor)
+
+</details>
+
+### 🧾 License Renewal Fine Calculator
+
+A single-file, Jalali/Shamsi-calendar-aware web tool that calculates overdue license-renewal penalties — overdue months × monthly fine, plus the fixed renewal fee — behind a responsive, modern neon interface.
+
+<a href="https://github.com/mehrdadmb2/javaz-renewal-calculator">
+  <img src="https://img.shields.io/badge/View_Repository-→-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Open javaz-renewal-calculator">
+</a>
+
+### 🛠️ Developer Tooling & Utilities
 
 ```yaml
 focus:
@@ -193,6 +209,14 @@ focus:
   - exportable reports
 ```
 
+<details>
+<summary><b>🔍 Related repositories</b></summary>
+<br>
+
+[`dns-quality-tester`](https://github.com/mehrdadmb2/dns-quality-tester) · [`dual-ping-monitor`](https://github.com/mehrdadmb2/dual-ping-monitor) · [`Windows-Network-Repair`](https://github.com/mehrdadmb2/Windows-Network-Repair) · [`github-profile-studio`](https://github.com/mehrdadmb2/github-profile-studio)
+
+</details>
+
 ### 🌐 Developer Portfolio
 
 A visual portfolio for projects, technical interests and a developer identity.
@@ -203,9 +227,10 @@ A visual portfolio for projects, technical interests and a developer identity.
 
 ---
 
+<a id="github-command-center"></a>
 ## `~/github-command-center $ ./metrics --live`
 
-This section is generated by **lowlighter/metrics**, the repository that powers the profile analytics layer. The current Metrics release line exposes a large plugin ecosystem, including isometric calendars, languages, achievements, habits, notable contributions, activity and repository views. urllowlighter/metrics on GitHubhttps://github.com/lowlighter/metrics
+This section is generated by **lowlighter/metrics**, the repository that powers the profile analytics layer. The current Metrics release line exposes a large plugin ecosystem, including isometric calendars, languages, achievements, habits, notable contributions, activity and repository views. Full plugin documentation: [lowlighter/metrics](https://github.com/lowlighter/metrics).
 
 ### 📊 Core dashboard
 
@@ -277,9 +302,10 @@ This section is generated by **lowlighter/metrics**, the repository that powers 
 
 ---
 
+<a id="achievements"></a>
 ## `~/achievements $ ./unlock`
 
-The achievement panel is generated directly by the **Metrics achievements plugin**, rather than a manually maintained trophy image. The official plugin supports compact/detailed displays, filters and thresholds; this setup keeps the data dynamic and repository-local. citeturn865460search0turn432327search0
+The achievement panel is generated directly by the **Metrics achievements plugin**, rather than a manually maintained trophy image. The official plugin supports compact/detailed displays, filters and thresholds; this setup keeps the data dynamic and repository-local.
 
 <p align="center">
   <img src="metrics.achievements.svg" alt="Dynamic GitHub achievements" width="100%">
@@ -293,6 +319,7 @@ The achievement panel is generated directly by the **Metrics achievements plugin
 
 ---
 
+<a id="contributions"></a>
 ## `~/contributions $ ./snake --watch`
 
 <div align="center">
@@ -328,6 +355,7 @@ next:
 
 ---
 
+<a id="support"></a>
 ## `~/support $ ./donate --interactive`
 
 <div align="center">
@@ -393,6 +421,7 @@ TGYN1zzeGUjuXipVPvS4gTUivQyAu7GNUm
 
 ---
 
+<a id="connect"></a>
 ## `~/connect $ ./open-channel`
 
 <div align="center">
