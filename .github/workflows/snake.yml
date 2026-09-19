@@ -1,0 +1,52 @@
+# Refreshes assets/snake.svg and assets/snake-dark.svg using the repo's own
+# scripts/generate_snake.py, so the on-brand neon snake (not a generic template)
+# actually updates — previously it was a one-time static file despite the README
+# describing it as dynamic.
+#
+# Reuses the same METRICS_TOKEN secret from metrics.yml (it already has the
+# "read:user" scope this script's GraphQL query needs for public contribution
+# data) — no second secret to create.
+name: Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # daily at 04:00 UTC, an hour after Profile Metrics
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/generate_snake.py"
+      - ".github/workflows/snake.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate snake SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GITHUB_USER: mehrdadmb2
+        run: python scripts/generate_snake.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/snake.svg assets/snake-dark.svg
+          if git diff --cached --quiet; then
+            echo "No change in contribution data — nothing to commit."
+          else
+            git commit -m "chore: refresh contribution snake [skip ci]"
+            git push
+          fi

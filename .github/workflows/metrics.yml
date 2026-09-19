@@ -1,0 +1,141 @@
+# Renders every metrics.*.svg referenced in README.md and commits them to the repo.
+#
+# One-time setup required (see SETUP.md for details):
+#   Settings → Secrets and variables → Actions → New repository secret
+#   Name:  METRICS_TOKEN
+#   Value: a classic Personal Access Token with the "repo" and "read:user" scopes
+#          (https://github.com/settings/tokens/new)
+#
+# Pinned to lowlighter/metrics@v3.34 for reproducible renders — v3.34 also fixes a
+# real upstream bug in the achievements plugin (GitHub's Projects-Classic sunset
+# used to crash it). Bump the version deliberately, not accidentally.
+name: Profile Metrics
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily at 03:00 UTC
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/metrics.yml"
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # Each step below is independent: "if: success() || failure()" means one
+      # plugin having a bad day (rate limit, transient API hiccup) can't take the
+      # rest of the images down with it — that's what caused 9 of 10 images to be
+      # permanently broken before this workflow existed.
+
+      - name: 📊 Core dashboard
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          template: classic
+          base: "header, activity, community, repositories, metadata"
+          config_timezone: Asia/Baku
+          plugin_languages: yes
+          plugin_languages_limit: 8
+
+      - name: 🧮 Isometric contribution terrain
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          config_timezone: Asia/Baku
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      - name: 🈷️ Language fingerprint
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_languages: yes
+          plugin_languages_details: lines, bytes-size, percentage
+          plugin_languages_limit: 10
+
+      - name: 🏆 Achievement matrix
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+
+      - name: 🧠 Coding habits
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.habits.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_habits: yes
+
+      - name: 🎩 Notable contributions
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.notable.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_notable: yes
+          plugin_notable_repositories: yes
+
+      - name: 📰 Recent activity
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.activity.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_activity: yes
+
+      - name: 📚 Repository landscape
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.repositories.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_repositories: yes
+
+      - name: 📆 Full contribution history
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.calendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
+
+      - name: 🧬 Lines changed over time
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: metrics.lines.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: mehrdadmb2
+          base: ""
+          plugin_lines: yes

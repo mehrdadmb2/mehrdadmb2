@@ -1,0 +1,43 @@
+name: "💬 Contact / Collaboration"
+description: "Reach out about a project idea, a technical question, or a professional inquiry."
+title: "[Contact]: "
+labels: ["contact"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out — this creates a **public** GitHub issue.
+        Do not include passwords, API keys, tokens, authentication cookies, wallet seed phrases, or other confidential information.
+        For anything private, use email instead (see the Connect section in the README).
+
+  - type: dropdown
+    id: reason
+    attributes:
+      label: What's this about?
+      options:
+        - Project collaboration
+        - Technical question
+        - Professional / business contact
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: >
+        Project collaboration: idea + current stack + desired outcome + what kind of help you need.
+        Technical question: environment + exact error + expected behaviour + what you already tried.
+        Professional contact: role + organization (if relevant) + purpose + preferred follow-up channel.
+      placeholder: Share as much relevant detail as you can.
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact method (optional)
+      placeholder: "Email, Telegram, LinkedIn, etc."
+    validations:
+      required: false

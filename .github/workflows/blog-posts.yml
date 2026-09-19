@@ -1,0 +1,40 @@
+# Fills in the <!-- BLOG-POST-LIST:START/END --> markers in README.md.
+#
+# Default feed: this profile's own GitHub Atom activity feed, so the
+# "~/blog $ tail -n 6 latest.log" section reads like an actual system log from
+# day one, with zero setup. The moment there's a real blog/newsletter, add its
+# RSS/Atom URL to feed_list below (comma-separate multiple feeds) — no other
+# change needed.
+#
+# Pinned to @v1 (floating major version) rather than an exact patch: this output
+# is cosmetic text, so tracking the latest 1.x bugfixes is safer here than
+# risking a retired patch tag.
+name: Blog Posts
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # daily at 05:00 UTC
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/blog-posts.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull latest entries into README.md
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          comment_tag_name: "BLOG-POST-LIST"
+          feed_list: "https://github.com/mehrdadmb2.atom"
+          max_post_count: 6
+          readme_path: "./README.md"
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
