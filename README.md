@@ -471,12 +471,12 @@ Do not include passwords, API keys, private tokens, authentication cookies, wall
 ## `~/blog $ tail -n 6 latest.log`
 
 <!-- BLOG-POST-LIST:START -->
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/ea50a5a300...b747033043)
-- [mehrdadmb2 pushed ArzPulse](https://github.com/mehrdadmb2/ArzPulse/compare/076f029e5d...037e735487)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/ada27504d8...0fbcaea40e)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/98427d3c22...ada27504d8)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/43455529e8...2086ba0227)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/0fde2f3e8e...98427d3c22)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/523c467cb6...8d8d09116b)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/36eb0df14b...94a845cb05)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/8b83de1319...36eb0df14b)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/bed76e0850...8b83de1319)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/6a962df90d...cc318896d6)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/9bef8c5379...55414303c9)
 <!-- BLOG-POST-LIST:END -->
 
 The blog section is refreshed automatically by GitHub Actions from the feeds configured in `.github/workflows/blog-posts.yml`.
