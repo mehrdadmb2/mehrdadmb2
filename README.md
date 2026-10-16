@@ -471,12 +471,12 @@ Do not include passwords, API keys, private tokens, authentication cookies, wall
 ## `~/blog $ tail -n 6 latest.log`
 
 <!-- BLOG-POST-LIST:START -->
-- [mehrdadmb2 opened a pull request in Vakilstay](https://github.com/Bita-prsp/Vakilstay/pull/3)
-- [mehrdadmb2 closed a pull request in Vakilstay](https://github.com/Bita-prsp/Vakilstay/pull/2)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/a950b1ca4b...83d8f5cfe6)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/01633bfc8d...42941e2c86)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/8b1ea9a75a...72d4dc4194)
-- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/0479e1ce2e...2c38e928b3)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/ccd65d6539...6aa6a46a46)
+- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/f8de516afa...30d2488aa1)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/20deca2181...f013860b84)
+- [mehrdadmb2 pushed Vakilstay](https://github.com/mehrdadmb2/Vakilstay/compare/d7a5ca3a28...3070fe3d67)
+- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/29518c679d...3b6893717d)
+- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/d75e4f5e35...ee5d61c128)
 <!-- BLOG-POST-LIST:END -->
 
 The blog section is refreshed automatically by GitHub Actions from the feeds configured in `.github/workflows/blog-posts.yml`.
