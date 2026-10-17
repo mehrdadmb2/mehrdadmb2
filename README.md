@@ -471,12 +471,12 @@ Do not include passwords, API keys, private tokens, authentication cookies, wall
 ## `~/blog $ tail -n 6 latest.log`
 
 <!-- BLOG-POST-LIST:START -->
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/ccd65d6539...6aa6a46a46)
-- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/f8de516afa...30d2488aa1)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/20deca2181...f013860b84)
-- [mehrdadmb2 pushed Vakilstay](https://github.com/mehrdadmb2/Vakilstay/compare/d7a5ca3a28...3070fe3d67)
-- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/29518c679d...3b6893717d)
-- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/d75e4f5e35...ee5d61c128)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/cc316d1ed0...6d0368bfb5)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/fddb3d30ff...cc316d1ed0)
+- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/9e1bdfb985...de7edd4d03)
+- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/7e7da8ba8f...9e1bdfb985)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/0ffb50d91e...fddb3d30ff)
+- [mehrdadmb2 pushed github-page-insights](https://github.com/mehrdadmb2/github-page-insights/compare/3c5a231e46...b4b99fc533)
 <!-- BLOG-POST-LIST:END -->
 
 The blog section is refreshed automatically by GitHub Actions from the feeds configured in `.github/workflows/blog-posts.yml`.
