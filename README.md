@@ -471,12 +471,12 @@ Do not include passwords, API keys, private tokens, authentication cookies, wall
 ## `~/blog $ tail -n 6 latest.log`
 
 <!-- BLOG-POST-LIST:START -->
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/55a0ccd183...404c231f23)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/1cca750451...962e8a49aa)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/9ed502197b...12b16db93f)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/46ec38c335...9ed502197b)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/4e2f3247b9...46ec38c335)
-- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/cd35c18d28...5767f63333)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/0578f54d9e...982e48423f)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/5ea3498c8c...0578f54d9e)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/06849eaa24...e7287e438f)
+- [mehrdadmb2 pushed dual-ping-monitor](https://github.com/mehrdadmb2/dual-ping-monitor/compare/b4b95d93f1...f09298cc8e)
+- [mehrdadmb2 pushed javaz-renewal-calculator](https://github.com/mehrdadmb2/javaz-renewal-calculator/compare/a521dbcf17...931e03aef0)
+- [mehrdadmb2 pushed PySmartHome-PC](https://github.com/mehrdadmb2/PySmartHome-PC/compare/4445b3e8e4...a31023a92e)
 <!-- BLOG-POST-LIST:END -->
 
 The blog section is refreshed automatically by GitHub Actions from the feeds configured in `.github/workflows/blog-posts.yml`.
