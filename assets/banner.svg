@@ -1,75 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 430" role="img" aria-labelledby="title desc">
-  <title id="title">Mehrdad — Software, IoT, Embedded and 3D</title>
-  <desc id="desc">Futuristic developer profile banner with a holographic grid, network lines and terminal-style identity.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
+  <title id="title">Mehrdad — Software, IoT, Embedded Systems and 3D</title>
+  <desc id="desc">A premium dark developer banner with holographic glass panels, a connected isometric core, data paths and a concise engineering identity.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07070D"/>
-      <stop offset="0.45" stop-color="#111025"/>
-      <stop offset="1" stop-color="#090D18"/>
+      <stop offset="0" stop-color="#050816"/><stop offset=".5" stop-color="#11152B"/><stop offset="1" stop-color="#070C18"/>
     </linearGradient>
-    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7C3AED"/>
-      <stop offset="0.5" stop-color="#C084FC"/>
-      <stop offset="1" stop-color="#67E8F9"/>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8B5CF6"/><stop offset=".48" stop-color="#C4B5FD"/><stop offset="1" stop-color="#67E8F9"/>
     </linearGradient>
-    <radialGradient id="orb" cx="50%" cy="50%">
-      <stop offset="0" stop-color="#C084FC" stop-opacity="0.55"/>
-      <stop offset="0.4" stop-color="#8B5CF6" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9A8BFA" stop-opacity=".23"/><stop offset="1" stop-color="#67E8F9" stop-opacity=".045"/>
+    </linearGradient>
+    <linearGradient id="cubeTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C4B5FD" stop-opacity=".95"/><stop offset="1" stop-color="#67E8F9" stop-opacity=".7"/>
+    </linearGradient>
+    <linearGradient id="cubeLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity=".92"/><stop offset="1" stop-color="#312E81" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".8"/><stop offset="1" stop-color="#155E75" stop-opacity=".95"/>
+    </linearGradient>
+    <radialGradient id="aura">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity=".34"/><stop offset=".55" stop-color="#22D3EE" stop-opacity=".08"/><stop offset="1" stop-color="#050816" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#B28CFF" stroke-opacity="0.08"/>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#94A3B8" stroke-opacity=".075" stroke-width="1"/>
     </pattern>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="20"/>
-    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="15"/></filter>
   </defs>
+  <rect width="1600" height="460" rx="30" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1598" height="458" rx="29" fill="url(#grid)" stroke="#A5B4FC" stroke-opacity=".2"/>
+  <ellipse cx="1240" cy="228" rx="390" ry="280" fill="url(#aura)"/>
+  <path d="M0 360C230 315 315 430 510 360S820 264 990 320 1340 440 1600 332" fill="none" stroke="url(#accent)" stroke-opacity=".13" stroke-width="1.5"/>
+  <path d="M0 392C230 347 315 462 510 392S820 296 990 352 1340 472 1600 364" fill="none" stroke="#67E8F9" stroke-opacity=".08" stroke-width="1"/>
 
-  <rect x="0" y="0" width="1600" height="430" rx="28" fill="url(#bg)"/>
-  <rect x="18" y="18" width="1564" height="394" rx="22" fill="url(#grid)"/>
-  <ellipse cx="1280" cy="240" rx="260" ry="190" fill="url(#orb)" filter="url(#soft)"/>
+  <!-- Identity block -->
+  <g transform="translate(78 58)">
+    <rect width="292" height="38" rx="12" fill="#0B1020" stroke="#8B5CF6" stroke-opacity=".55"/>
+    <circle cx="19" cy="19" r="4.5" fill="#34D399"/>
+    <text x="34" y="24" fill="#C4B5FD" font-family="JetBrains Mono,Consolas,monospace" font-size="14" letter-spacing="1.1">MEHRDAD / ENGINEERING</text>
+  </g>
+  <text x="76" y="198" fill="url(#accent)" font-family="Segoe UI,Arial,sans-serif" font-size="100" font-weight="800" letter-spacing="-3">MEHRDAD</text>
+  <rect x="80" y="224" width="94" height="4" rx="2" fill="url(#accent)"/>
+  <text x="78" y="267" fill="#F8FAFC" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="650">Software that connects the real and digital worlds.</text>
+  <text x="80" y="306" fill="#A5B4FC" font-family="JetBrains Mono,Consolas,monospace" font-size="16">software · IoT · embedded systems · automation · 3D</text>
 
-  <g opacity="0.65" fill="none" stroke="url(#neon)" stroke-width="2" filter="url(#glow)">
-    <path d="M75 332 C220 210, 300 390, 430 268 S690 95, 820 234"/>
-    <path d="M980 105 C1100 185, 1170 62, 1305 168 S1488 300, 1545 130"/>
-    <path d="M1120 358 C1200 308, 1280 408, 1450 320" opacity="0.5"/>
+  <g font-family="JetBrains Mono,Consolas,monospace" font-size="13">
+    <g transform="translate(80 342)"><rect width="132" height="34" rx="10" fill="url(#glass)" stroke="#8B5CF6" stroke-opacity=".42"/><text x="66" y="22" text-anchor="middle" fill="#DDD6FE">PYTHON / C++</text></g>
+    <g transform="translate(222 342)"><rect width="148" height="34" rx="10" fill="url(#glass)" stroke="#8B5CF6" stroke-opacity=".42"/><text x="74" y="22" text-anchor="middle" fill="#C4B5FD">ESP32 / ARDUINO</text></g>
+    <g transform="translate(380 342)"><rect width="145" height="34" rx="10" fill="url(#glass)" stroke="#22D3EE" stroke-opacity=".4"/><text x="72.5" y="22" text-anchor="middle" fill="#A5F3FC">AUTOMATION</text></g>
+    <g transform="translate(535 342)"><rect width="116" height="34" rx="10" fill="url(#glass)" stroke="#22D3EE" stroke-opacity=".4"/><text x="58" y="22" text-anchor="middle" fill="#A5F3FC">3D / VFX</text></g>
   </g>
 
-  <g fill="#C084FC" filter="url(#glow)">
-    <circle cx="75" cy="332" r="5"/>
-    <circle cx="430" cy="268" r="5"/>
-    <circle cx="820" cy="234" r="5"/>
-    <circle cx="980" cy="105" r="5"/>
-    <circle cx="1305" cy="168" r="5"/>
-    <circle cx="1545" cy="130" r="5"/>
+  <!-- Connected isometric compute core -->
+  <g transform="translate(1170 215)">
+    <ellipse cx="0" cy="126" rx="208" ry="32" fill="#020617" opacity=".75" filter="url(#shadow)"/>
+    <ellipse cx="0" cy="126" rx="168" ry="17" fill="none" stroke="#67E8F9" stroke-opacity=".35"/>
+    <ellipse cx="0" cy="126" rx="210" ry="44" fill="none" stroke="#A78BFA" stroke-opacity=".18" stroke-dasharray="4 10"/>
+    <circle cx="0" cy="0" r="174" fill="none" stroke="#A78BFA" stroke-opacity=".22" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="144" fill="none" stroke="#67E8F9" stroke-opacity=".2" stroke-width="1.5" stroke-dasharray="3 8"/>
+    <path d="M-166 -54A175 175 0 0 1 45 -169" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M111 134A175 175 0 0 1 -127 120" fill="none" stroke="#22D3EE" stroke-opacity=".7" stroke-width="2"/>
+
+    <g stroke="#C4B5FD" stroke-opacity=".82" stroke-width="1.5">
+      <path d="M0 -91V-132M-79 -45L-119 -68M79 -45L119 -68M0 91V132M-79 45L-119 68M79 45L119 68" fill="none"/>
+      <circle cx="0" cy="-137" r="4.5" fill="#67E8F9" stroke="none"/>
+      <circle cx="-124" cy="-71" r="4.5" fill="#C4B5FD" stroke="none"/>
+      <circle cx="124" cy="-71" r="4.5" fill="#67E8F9" stroke="none"/>
+      <circle cx="0" cy="137" r="4.5" fill="#C4B5FD" stroke="none"/>
+      <circle cx="-124" cy="71" r="4.5" fill="#67E8F9" stroke="none"/>
+      <circle cx="124" cy="71" r="4.5" fill="#C4B5FD" stroke="none"/>
+    </g>
+
+    <!-- cube faces -->
+    <path d="M0 -91L88 -43L0 7L-88 -43Z" fill="url(#cubeTop)" stroke="#E0F2FE" stroke-opacity=".88" stroke-width="1.5"/>
+    <path d="M-88 -43L0 7V108L-88 58Z" fill="url(#cubeLeft)" stroke="#C4B5FD" stroke-opacity=".72" stroke-width="1.5"/>
+    <path d="M0 7L88 -43V58L0 108Z" fill="url(#cubeRight)" stroke="#A5F3FC" stroke-opacity=".78" stroke-width="1.5"/>
+    <path d="M-52 -43L0 -71L52 -43L0 -13Z" fill="#F8FAFC" fill-opacity=".17" stroke="#F8FAFC" stroke-opacity=".4"/>
+    <path d="M-58 -9L0 25L58 -9M-58 21L0 55L58 21M-58 50L0 83L58 50" fill="none" stroke="#E0F2FE" stroke-opacity=".18"/>
+    <path d="M-40 -20V34M-20 -9V45M20 -9V45M40 -20V34" fill="none" stroke="#E0F2FE" stroke-opacity=".2"/>
+    <circle cx="0" cy="8" r="13" fill="#F8FAFC" fill-opacity=".16" stroke="#ECFEFF" stroke-opacity=".75"/>
+    <circle cx="0" cy="8" r="4" fill="#ECFEFF" filter="url(#glow)"/>
   </g>
 
-  <g transform="translate(1180 74)" opacity="0.78" fill="none" stroke="#67E8F9">
-    <circle cx="120" cy="120" r="86"/>
-    <circle cx="120" cy="120" r="112" opacity="0.3"/>
-    <path d="M8 120h224M120 8v224"/>
-    <path d="M55 55l130 130M185 55L55 185" opacity="0.35"/>
+  <!-- Floating glass panels -->
+  <g font-family="JetBrains Mono,Consolas,monospace">
+    <g transform="translate(1002 64)">
+      <rect width="204" height="64" rx="14" fill="#0B1020" fill-opacity=".88" stroke="#8B5CF6" stroke-opacity=".62"/>
+      <circle cx="20" cy="21" r="4" fill="#34D399"/>
+      <text x="34" y="25" fill="#DDD6FE" font-size="12">DEVICE / 01</text>
+      <text x="20" y="46" fill="#94A3B8" font-size="11">sensor node online</text>
+    </g>
+    <g transform="translate(1328 146)">
+      <rect width="174" height="64" rx="14" fill="#0B1020" fill-opacity=".9" stroke="#22D3EE" stroke-opacity=".6"/>
+      <text x="16" y="25" fill="#A5F3FC" font-size="12">API / READY</text>
+      <path d="M16 41H46L55 33L65 47L75 39H153" fill="none" stroke="#67E8F9" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(1027 382)">
+      <rect width="208" height="40" rx="12" fill="#0B1020" fill-opacity=".92" stroke="#8B5CF6" stroke-opacity=".52"/>
+      <text x="104" y="25" text-anchor="middle" fill="#C4B5FD" font-size="12">BUILD / TEST / IMPROVE</text>
+    </g>
   </g>
-
-  <g transform="translate(92 78)">
-    <rect x="0" y="0" width="240" height="42" rx="12" fill="#0C0B15" stroke="#7C3AED" stroke-opacity="0.55"/>
-    <circle cx="20" cy="21" r="5" fill="#34D399"/>
-    <text x="35" y="26" fill="#C4B5FD" font-family="JetBrains Mono,Consolas,monospace" font-size="15">system://mehrdad</text>
-  </g>
-
-  <text x="800" y="165" text-anchor="middle" fill="url(#neon)" font-family="Segoe UI,Arial,sans-serif" font-size="88" font-weight="800" letter-spacing="10">MEHRDAD</text>
-  <text x="800" y="215" text-anchor="middle" fill="#F5F3FF" font-family="JetBrains Mono,Consolas,monospace" font-size="24" letter-spacing="2">SOFTWARE • IoT • EMBEDDED • 3D</text>
-  <text x="800" y="258" text-anchor="middle" fill="#A78BFA" font-family="JetBrains Mono,Consolas,monospace" font-size="17">turning ideas into practical systems</text>
-
-  <g font-family="JetBrains Mono,Consolas,monospace" fill="#94A3B8" font-size="13">
-    <text x="110" y="372">$ whoami → mehrdadmb2</text>
-    <text x="610" y="372">$ build --reliable --useful</text>
-    <text x="1170" y="372">$ status → online</text>
-  </g>
-
-  <rect x="550" y="300" width="500" height="2" rx="1" fill="url(#neon)" opacity="0.8"/>
+  <g fill="#E0F2FE" filter="url(#glow)"><circle cx="945" cy="175" r="2.7"/><circle cx="1404" cy="313" r="2.8"/><circle cx="1290" cy="76" r="2.5"/><circle cx="1450" cy="386" r="2.4"/></g>
+  <text x="80" y="425" fill="#64748B" font-family="JetBrains Mono,Consolas,monospace" font-size="12">SHIRAZ, IRAN  /  COMPUTER ENGINEERING — SOFTWARE</text>
+  <text x="1520" y="425" text-anchor="end" fill="#64748B" font-family="JetBrains Mono,Consolas,monospace" font-size="12">BUILD USEFUL THINGS ↗</text>
 </svg>

@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 74" role="img" aria-label="Online build status">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 82" role="img" aria-labelledby="title desc">
+  <title id="title">Profile overview</title>
+  <desc id="desc">A decorative status strip describing Mehrdad's work across software, IoT, systems and 3D with automated profile assets.</desc>
   <defs>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7C3AED"/>
-      <stop offset="0.5" stop-color="#C084FC"/>
-      <stop offset="1" stop-color="#67E8F9"/>
-    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset=".52" stop-color="#C4B5FD"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10172B"/><stop offset="1" stop-color="#090D18"/></linearGradient>
   </defs>
-  <rect x="1" y="1" width="1198" height="72" rx="18" fill="#0B0A12" stroke="url(#line)" stroke-opacity="0.55"/>
-  <circle cx="30" cy="37" r="7" fill="#34D399"/>
-  <text x="52" y="43" fill="#F5F3FF" font-family="JetBrains Mono,Consolas,monospace" font-size="19">ONLINE</text>
-  <text x="248" y="43" fill="#94A3B8" font-family="JetBrains Mono,Consolas,monospace" font-size="17">•</text>
-  <text x="278" y="43" fill="#C4B5FD" font-family="JetBrains Mono,Consolas,monospace" font-size="17">BUILD MODE</text>
-  <text x="485" y="43" fill="#94A3B8" font-family="JetBrains Mono,Consolas,monospace" font-size="17">•</text>
-  <text x="515" y="43" fill="#C4B5FD" font-family="JetBrains Mono,Consolas,monospace" font-size="17">LOCAL VISUAL ASSETS</text>
-  <text x="885" y="43" fill="#94A3B8" font-family="JetBrains Mono,Consolas,monospace" font-size="17">•</text>
-  <text x="915" y="43" fill="#67E8F9" font-family="JetBrains Mono,Consolas,monospace" font-size="17">METRICS / LIVE</text>
+  <rect x="1" y="1" width="1198" height="80" rx="20" fill="url(#panel)" stroke="url(#line)" stroke-opacity=".58"/>
+  <path d="M18 1H1182" stroke="url(#line)" stroke-width="2" stroke-linecap="round" opacity=".68"/>
+  <circle cx="32" cy="41" r="7" fill="#34D399"/>
+  <circle cx="32" cy="41" r="12" fill="none" stroke="#34D399" stroke-opacity=".22" stroke-width="5"/>
+  <text x="56" y="36" fill="#F8FAFC" font-family="JetBrains Mono,Consolas,monospace" font-size="17" font-weight="700">BUILD MODE</text>
+  <text x="56" y="56" fill="#64748B" font-family="JetBrains Mono,Consolas,monospace" font-size="11">LEARN · SHIP · IMPROVE</text>
+  <path d="M260 19V63M570 19V63M885 19V63" stroke="#64748B" stroke-opacity=".28"/>
+  <g font-family="JetBrains Mono,Consolas,monospace">
+    <text x="286" y="35" fill="#C4B5FD" font-size="14">FOCUS</text><text x="286" y="56" fill="#E2E8F0" font-size="13">SOFTWARE + SYSTEMS</text>
+    <text x="596" y="35" fill="#A5F3FC" font-size="14">BUILD</text><text x="596" y="56" fill="#E2E8F0" font-size="13">IOT + AUTOMATION + 3D</text>
+    <text x="910" y="35" fill="#C4B5FD" font-size="14">PROFILE</text><text x="910" y="56" fill="#E2E8F0" font-size="13">ASSETS SYNCED BY ACTIONS</text>
+  </g>
 </svg>
