@@ -1,0 +1,39 @@
+name: Profile Health Check
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "scripts/check_profile.py"
+      - ".github/workflows/profile-health.yml"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "scripts/check_profile.py"
+      - ".github/workflows/profile-health.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: profile-health-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate README and visual assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Validate local README assets and SVG markup
+        run: python scripts/check_profile.py
