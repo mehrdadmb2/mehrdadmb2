@@ -1,50 +1,46 @@
-﻿# Mehrdad Profile Refresh — package notes
+# Mehrdad Profile Refresh v2 — package notes
 
-This package overlays a carefully scoped refresh onto an existing local clone of `mehrdadmb2/mehrdadmb2`. It keeps the profile's terminal/engineering identity while modernizing the hero artwork, stack/status graphics and workflow maintenance.
+This package rebuilds the profile README and its local visual/data pipeline. It is intended to be applied to the existing `mehrdadmb2/mehrdadmb2` repository; it does not modify the three source projects.
 
 ## Included
 
-- New hero/banner, status strip, technology stack panel and footer SVGs.
-- Pinned and hardened Metrics, Snake and Activity-feed workflows.
-- New Profile Health Check workflow and validator script.
-- Weekly Dependabot checks for pinned GitHub Actions.
-- `.gitignore` plus a PowerShell helper that copies the payload into your clone, updates README/SETUP/CHANGELOG text and removes previously tracked Python cache files.
-- A preview of the new hero is supplied separately with the download links.
+- A redesigned README with project cards, clearer navigation, cross-project live telemetry and a dynamically selected IMDb poster shelf.
+- New local vector artwork: banner, MB2 monogram, status strip, technology panel, three project marks and footer.
+- A Python generator that reads public ArzPulse and PySmartHome-PC JSON feeds and refreshes an SVG dashboard.
+- A poster collector that selects up to four personally rated movies from IMDb Showcase and downloads their cached local posters.
+- Two dedicated GitHub Actions workflows for live data and movie posters.
+- Expanded profile health checks and unit tests.
+- Updated setup and Persian upload instructions.
+- A PowerShell overlay helper that backs up replaced files, validates the result and never commits or pushes automatically.
+
+Existing Metrics, contribution snake, blog feed, issue templates, donation QR files and repository metadata are retained.
 
 ## Apply on Windows
 
-1. Download and extract the ZIP anywhere (it does **not** need to be inside your git clone).
-2. Open PowerShell in the extracted `mehrdadmb2-profile-refresh` folder.
-3. Run the following, replacing the example path with your actual local clone path:
+1. Download and extract the ZIP to a separate folder.
+2. Open PowerShell in the extracted `mehrdadmb2-profile-refresh-v2` folder.
+3. Run:
 
    ```powershell
-   Set-ExecutionPolicy -Scope Process Bypass
-   .\APPLY-REFRESH.ps1 -RepoPath "C:\path\to\mehrdadmb2"
+   .\APPLY-REFRESH.ps1 -RepoPath "C:\path\to\your\mehrdadmb2-clone"
    ```
 
-4. Then open a terminal in your repository clone and validate/review the changes:
+4. The helper stores backups under `.profile-refresh-backup/<timestamp>/`, copies the new files, and runs the local validator and unit tests when Python is available.
+5. Review `git status --short` and `git diff --check`, then commit and push manually.
 
-   ```powershell
-   python scripts/check_profile.py
-   git status --short
-   git diff --check
-   git diff -- README.md SETUP.md CHANGELOG.md
-   ```
+The helper does not access GitHub credentials, alter the source projects, or publish changes on your behalf.
 
-5. If the review looks correct, commit and push:
+## Required setup
 
-   ```powershell
-   git add -A
-   git commit -m "chore: modernize profile visuals and workflows"
-   git push origin main
-   ```
+- Allow GitHub Actions to write repository contents (`contents: write`).
+- Keep `METRICS_TOKEN` for the existing Metrics and contribution-snake workflows.
+- No additional token or secret is required for the ArzPulse, PySmartHome-PC or IMDb Showcase feeds; all three source repositories are public.
 
-The helper preflights the expected README/SETUP/CHANGELOG layout before copying or rewriting files and stops if the source layout is different. It never commits or pushes automatically. Review generated workflow changes before pushing.
+Run `Live Profile Data` and `Featured Movie Posters` manually once after uploading. More detail is in `SETUP.md` and `UPLOAD-GUIDE.fa.md`.
 
-## Notes
+## Refresh behaviour
 
-- Existing `METRICS_TOKEN` secret remains required by Metrics and Contribution Snake. No new secret is introduced.
-- `lowlighter/metrics` stays on `v3.34`, the latest upstream release verified for this refresh; its action reference is pinned to the corresponding commit SHA.
-- The visual assets are repository-local SVGs, so rendering the hero does not depend on an external image host.
-- `.github/workflows/profile-health.yml` validates README-local asset references and SVG parsing. YAML and SVG syntax were checked while preparing the package; run the Python profile checker after applying it.
-- GitHub writes from this chat connection were rejected with `403 Resource not accessible by integration`; therefore this bundle is prepared for review and application locally, and has not been pushed to `main`.
+- Market and IoT snapshot: every 10 minutes (best-effort GitHub Actions schedule).
+- Movie poster shelf: every 12 hours.
+- Market data older than 20 minutes and sensor readings older than 15 minutes are explicitly labelled stale.
+- A missing source never becomes a fabricated live value. The latest known movie shelf is retained if poster retrieval fails.

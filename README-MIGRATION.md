@@ -1,53 +1,68 @@
-# Migration checklist
+# Migration checklist — profile refresh v2
 
-## Remove conflicting files
+This update replaces the previous profile README and visual assets while preserving the existing Metrics, Snake, Blog Posts and issue-template automation.
 
-Delete old workflows that produce the same profile assets, for example:
+## Apply the update
 
-```text
-.github/workflows/metrics.yml          # replace with the supplied version
-.github/workflows/profile-3d-contrib.yml
-.github/workflows/snake.yml
+Use the included PowerShell helper from the extracted package folder:
+
+```powershell
+.\APPLY-REFRESH.ps1 -RepoPath "C:\path\to\mehrdadmb2"
 ```
 
-If you already have a different workflow for blog posts, replace it with the supplied `blog-posts.yml` instead of running both.
+The helper backs up replaced files, copies the v2 payload and runs the Python validator/tests when Python is installed. It never commits or pushes.
 
-## Keep your existing backup files
+## Workflows to keep
 
-Files such as historical README backups can stay. They do not affect the profile unless they are named `README.md` or are referenced by an active workflow.
-
-## Canonical structure
+Keep one active copy of each workflow below. Replace the existing `profile-health.yml` with the supplied version; add the two new workflows rather than creating duplicate schedules.
 
 ```text
-.
-├── README.md
-├── SETUP.md
-├── README-MIGRATION.md
-├── assets/
-│   ├── banner.svg
-│   ├── status.svg
-│   ├── stack.svg
-│   ├── footer.svg
-│   ├── snake.svg
-│   ├── snake-dark.svg
-│   └── qr/
-│       ├── ton.svg
-│       ├── trc20-usdt.svg
-│       ├── ethereum.svg
-│       ├── bitcoin.svg
-│       ├── solana.svg
-│       ├── bnb.svg
-│       ├── polygon.svg
-│       └── tron.svg
-├── scripts/
-│   ├── generate_qr.py
-│   └── generate_visual_assets.py
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    │   ├── contact.yml
-    │   └── config.yml
-    └── workflows/
-        ├── metrics.yml
-        ├── blog-posts.yml
-        └── snake.yml
+.github/workflows/
+├── blog-posts.yml
+├── featured-movies.yml
+├── live-profile-data.yml
+├── metrics.yml
+├── profile-health.yml
+└── snake.yml
 ```
+
+## Canonical generated assets
+
+```text
+assets/
+├── banner.svg
+├── footer.svg
+├── live-dashboard.svg
+├── logo.svg
+├── project-arzpulse.svg
+├── project-cinema.svg
+├── project-smarthome.svg
+├── stack.svg
+├── status.svg
+├── snake.svg
+├── snake-dark.svg
+├── posters/             # Downloaded by Featured Movie Posters
+└── qr/                  # Existing local donation QR images
+```
+
+`metrics*.svg` files remain at the repository root as before.
+
+## README markers — do not remove
+
+```html
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+<!-- FEATURED-MOVIES:START -->
+<!-- FEATURED-MOVIES:END -->
+```
+
+The blog workflow updates the first pair. The movie workflow rewrites only the content between the second pair.
+
+## Permissions and secrets
+
+- Set GitHub Actions workflow permissions to allow repository contents write.
+- Keep `METRICS_TOKEN` for Metrics and contribution snake.
+- No token is needed for the public ArzPulse, PySmartHome-PC or IMDb Showcase datasets.
+
+See `SETUP.md` for workflow schedules, freshness rules and troubleshooting.

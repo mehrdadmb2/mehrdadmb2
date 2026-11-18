@@ -1,134 +1,106 @@
-# Setup — read this once after uploading
+# Setup — profile refresh v2
 
-Everything the README references now actually exists in this repo. This file is
-the one-time checklist to make it render fully on GitHub.
+The README is generated from local SVG assets and public JSON feeds. The live-data workflows do not require a server, a Cloudflare Worker, a GitHub PAT, or secrets from the source projects.
 
-## 1. Create the METRICS_TOKEN secret
+## 1. GitHub Actions permissions
 
-Both `metrics.yml` and `snake.yml` need one classic Personal Access Token.
+Open **Settings → Actions → General → Workflow permissions** and allow workflows to read and write repository contents. The repository-level setting must not block the `contents: write` permissions declared by the two refresh workflows.
 
-1. Go to <https://github.com/settings/tokens/new>.
-2. Scopes: **`repo`** and **`read:user`**. (Public-only profile → `public_repo` instead of full `repo` also works.)
-3. Copy the token.
-4. In this repository: `Settings → Secrets and variables → Actions → New repository secret`.
-5. Name: `METRICS_TOKEN`. Value: the token. Save.
+The live-data and movie-poster workflows use the repository's automatic `GITHUB_TOKEN`. They only write to this profile repository:
 
-Nothing else needs a secret — `blog-posts.yml` and the commit step in `snake.yml`
-use the automatic `GITHUB_TOKEN` that every workflow already has.
+- `Live Profile Data` updates `assets/live-dashboard.svg` every 10 minutes.
+- `Featured Movie Posters` refreshes the movie shelf and local poster cache every 12 hours.
 
-## 2. First run
+Neither workflow writes to ArzPulse, PySmartHome-PC or IMDb Showcase.
 
-`Actions` tab → run each of these once manually (▸ *Run workflow*), in order:
+## 2. Optional Metrics token
 
-1. **Profile Metrics** — takes ~1–2 minutes, writes all 10 `metrics.*.svg` files.
-2. **Contribution Snake** — writes `assets/snake.svg` / `assets/snake-dark.svg`.
-3. **Blog Posts** — fills in the section between the `BLOG-POST-LIST` markers.
+The `lowlighter/metrics` and contribution-snake workflows still use `METRICS_TOKEN`.
 
-Then open the profile README and confirm every image loads. After this, all
-three run on their own schedule (see each workflow's `cron:` line) and again on
-every push to `main`.
+1. Create a fine-scoped/classic token that can read public repositories and user profile data (`public_repo` + `read:user` for a public-only profile; use `repo` only when private-repository metrics are genuinely required).
+2. Add it under **Settings → Secrets and variables → Actions → New repository secret**.
+3. Name the secret exactly `METRICS_TOKEN`.
 
-## 3. What each workflow owns
+The live market, IoT and poster workflows do **not** use this token.
 
-| File | Generates | Schedule | Token |
+## 3. First run
+
+After uploading the refreshed files, open **Actions** and run these workflows manually once:
+
+1. **Live Profile Data** — fetches the published ArzPulse and PySmartHome JSON snapshots and generates the live SVG.
+2. **Featured Movie Posters** — downloads up to four locally cached posters from IMDb Showcase and writes the movie shelf into README.
+3. **Profile Metrics** — regenerates the Metrics panels (requires `METRICS_TOKEN`).
+4. **Contribution Snake** — generates the light/dark contribution snake.
+5. **Blog Posts** — refreshes the activity feed between the markers in README.
+
+`Profile Health Check` also runs on relevant pushes and pull requests. It verifies local README references, required assets, SVG syntax and generator tests.
+
+## 4. Data sources and freshness
+
+| Display | Public source | What is shown |
+|---|---|---|
+| Gold | `ArzPulse/docs/data/latest.json` | 18K price per gram, converted from rial to toman |
+| USDT | `ArzPulse/docs/data/latest.json` | Latest USDT/IRR value, converted from rial to toman |
+| Room 1 / Hub | `PySmartHome-PC/data/status.json` | Temperature, humidity, online state, latency and sample count |
+| Room 2 / Sensor S3 | `PySmartHome-PC/data/status.json` | Temperature, humidity, online state, latency and sample count |
+| Movie shelf | `imdb-showcase/docs/movies.json` and `docs/posters/` | Up to four highest personal-rated titles with cached posters |
+
+All source links are public raw repository data. The generator labels market snapshots older than 20 minutes as stale and IoT readings older than 15 minutes as stale. Missing or unreachable feeds are displayed as unavailable; the previous successful movie shelf is kept when poster downloads fail.
+
+GitHub Actions schedules are best-effort and may start late. A 10-minute refresh interval is not a guarantee of real-time delivery. The profile always displays source timestamps, so the viewer can judge the age of the information.
+
+## 5. Local validation
+
+Requirements: Python 3.10+ (the workflows use Python 3.12). No third-party Python packages are needed.
+
+```bash
+python scripts/check_profile.py
+python -m unittest discover -s tests -v
+```
+
+To refresh both data panels and posters manually from a machine with internet access:
+
+```bash
+python scripts/generate_live_profile.py
+```
+
+Or refresh each part separately:
+
+```bash
+python scripts/generate_live_profile.py --live-only
+python scripts/generate_live_profile.py --movies-only
+```
+
+## 6. Existing automation
+
+| Workflow | Output | Schedule | Secret |
 |---|---|---|---|
-| `.github/workflows/metrics.yml` | `metrics.svg` + 9 more `metrics.*.svg` | daily 03:00 UTC | `METRICS_TOKEN` |
-| `.github/workflows/snake.yml` | `assets/snake.svg`, `assets/snake-dark.svg` | daily 04:00 UTC | `METRICS_TOKEN` (read) + `GITHUB_TOKEN` (commit) |
-| `.github/workflows/blog-posts.yml` | text between the `BLOG-POST-LIST` markers | daily 05:00 UTC | `GITHUB_TOKEN` |
+| `metrics.yml` | `metrics*.svg` analytics panels | Daily | `METRICS_TOKEN` |
+| `snake.yml` | `assets/snake.svg`, `assets/snake-dark.svg` | Daily | `METRICS_TOKEN` |
+| `blog-posts.yml` | Activity-feed text in README | Daily | `GITHUB_TOKEN` |
+| `live-profile-data.yml` | `assets/live-dashboard.svg` | Every 10 minutes | None |
+| `featured-movies.yml` | README movie shelf and `assets/posters/` | Every 12 hours | None |
+| `profile-health.yml` | Validation only | Push / pull request / manual | None |
 
-`metrics.yml` runs each `metrics.*.svg` as its own step with
-`if: success() || failure()`, so one plugin failing (rate limit, transient API
-error) can't take the other nine images down with it — that's exactly what left
-9 of 10 metrics images permanently broken before this setup existed.
+The blog workflow depends on these exact README markers; do not delete or rename them:
 
-## 4. Versioning
-
-- `lowlighter/metrics` is pinned to **`@v3.34`** — an exact version, not
-  `@latest`, so a future upstream release can't silently change the images.
-  v3.34 also fixes a real bug where the achievements plugin could crash after
-  GitHub sunset "Projects (classic)". Upgrade deliberately: change `@v3.34` in
-  one commit, then check the rendered SVGs before merging.
-- `gautamkrishnar/blog-post-workflow` is pinned to **`@v1`** (floating major
-  version, not an exact patch) — its output is just text, so tracking the
-  latest 1.x bugfixes automatically is lower-risk than for the Metrics images.
-
-## 5. Timezone
-
-`config_timezone: Asia/Baku` in `metrics.yml` controls how day boundaries are
-computed for the habits/activity plugins. Change both occurrences if a
-different display timezone is wanted.
-
-## 6. Blog feed
-
-`blog-posts.yml` defaults `feed_list` to this profile's own GitHub Atom feed
-(`https://github.com/mehrdadmb2.atom`), so the `~/blog $ tail -n 6 latest.log`
-section reads like a real activity log immediately, with no setup. The moment
-there's an actual blog, newsletter, or Dev.to/Medium profile, replace that URL
-with its RSS/Atom feed — comma-separate multiple feeds if there's more than
-one. Keep the `<!-- BLOG-POST-LIST:START -->` / `<!-- BLOG-POST-LIST:END -->`
-markers in `README.md` exactly as they are; the workflow writes between them.
-
-## 7. Donation QR codes
-
-QR images live in `assets/qr/` and are generated locally by
-`scripts/generate_qr.py` from the addresses hard-coded in that file — no QR
-rendering API is called when someone views the README. To regenerate after
-changing an address:
-
-```bash
-python -m pip install "qrcode[pil]"
-python scripts/generate_visual_assets.py
+```html
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 ```
 
-Then commit the changed SVGs under `assets/qr/`.
+The featured poster workflow also needs its markers:
 
-## 8. Contact form
-
-The "Open Contact / Collaboration Form" link in the README points at
-`.github/ISSUE_TEMPLATE/contact.yml`, a GitHub Issue Form. `config.yml` in the
-same folder disables blank issues and adds quick links (email, Telegram,
-LinkedIn) next to the form. Both need to be on the repo's default branch to
-take effect — they will be, once this package is uploaded.
-
-## 9. One-time repo cleanup
-
-`scripts/__pycache__/` was previously committed by accident. `.gitignore` now
-excludes it, but that only stops *new* commits from adding it back — it won't
-remove what's already tracked. Run this once after uploading:
-
-```bash
-git rm -r --cached scripts/__pycache__
-git commit -m "chore: stop tracking compiled Python cache"
-git push
+```html
+<!-- FEATURED-MOVIES:START -->
+<!-- FEATURED-MOVIES:END -->
 ```
 
-## 10. If an image stays blank
+## 7. Troubleshooting
 
-Check the failing step's log under the `Actions` tab first. Common causes:
-
-- `METRICS_TOKEN` missing, expired, or missing the `read:user` scope
-- repository setting `Settings → Actions → General → Workflow permissions` set
-  to "Read repository contents" instead of allowing `contents: write` (the
-  workflows already declare `permissions: contents: write`, but an
-  organization/repo-level lockdown can still override it)
-- a feed in `feed_list` that doesn't actually expose RSS/Atom XML
-
-## Architecture
-
-```text
-                       GitHub profile repository
-                                │
-              ┌─────────────────┼─────────────────┐
-              │                 │                 │
-      lowlighter/metrics   generate_snake.py   local assets
-      (GitHub data → SVG)  (GitHub data → SVG)  (SVG + QR, static)
-              │                 │                 │
-              └─────────────────┼─────────────────┘
-                                │
-                            README.md
-                                │
-              ┌─────────────────┼─────────────────┐
-              │                 │                 │
-          analytics         identity           contact
-          panels            visuals           Issue Form
-```
+- **Live panel says unavailable:** open the two source JSON links from the README. If they are unavailable or malformed, the profile intentionally reports that state instead of fabricating a value.
+- **A market value says stale:** inspect `timestamp`, `lastGoodTimestamp`, `derivedStale` and the relevant asset's `stale` flag in ArzPulse.
+- **A sensor says stale/offline:** inspect `generated_at`, `last_seen` and `online` in PySmartHome-PC's `data/status.json`.
+- **Movie posters do not appear:** run `Featured Movie Posters` manually and inspect its log. The source collection must contain a usable `imdb_id` and poster cache entry/URL.
+- **Workflow cannot push:** check that Actions are enabled and repository workflow permissions allow `contents: write`.
+- **Metrics images are blank:** check `METRICS_TOKEN`, its scopes and the `Profile Metrics` job logs. This token is unrelated to the live-data panel.

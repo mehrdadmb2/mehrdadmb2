@@ -1,20 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 82" role="img" aria-labelledby="title desc">
-  <title id="title">Profile overview</title>
-  <desc id="desc">A decorative status strip describing Mehrdad's work across software, IoT, systems and 3D with automated profile assets.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 94" role="img" aria-labelledby="title desc">
+  <title id="title">Mehrdad engineering profile</title><desc id="desc">A compact glassmorphism status strip for software engineering, IoT and 3D work.</desc>
   <defs>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8B5CF6"/><stop offset=".52" stop-color="#C4B5FD"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10172B"/><stop offset="1" stop-color="#090D18"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#34E4D0"/><stop offset=".52" stop-color="#8291FF"/><stop offset="1" stop-color="#FF9B59"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#15233A"/><stop offset="1" stop-color="#0A1221"/></linearGradient>
   </defs>
-  <rect x="1" y="1" width="1198" height="80" rx="20" fill="url(#panel)" stroke="url(#line)" stroke-opacity=".58"/>
-  <path d="M18 1H1182" stroke="url(#line)" stroke-width="2" stroke-linecap="round" opacity=".68"/>
-  <circle cx="32" cy="41" r="7" fill="#34D399"/>
-  <circle cx="32" cy="41" r="12" fill="none" stroke="#34D399" stroke-opacity=".22" stroke-width="5"/>
-  <text x="56" y="36" fill="#F8FAFC" font-family="JetBrains Mono,Consolas,monospace" font-size="17" font-weight="700">BUILD MODE</text>
-  <text x="56" y="56" fill="#64748B" font-family="JetBrains Mono,Consolas,monospace" font-size="11">LEARN · SHIP · IMPROVE</text>
-  <path d="M260 19V63M570 19V63M885 19V63" stroke="#64748B" stroke-opacity=".28"/>
-  <g font-family="JetBrains Mono,Consolas,monospace">
-    <text x="286" y="35" fill="#C4B5FD" font-size="14">FOCUS</text><text x="286" y="56" fill="#E2E8F0" font-size="13">SOFTWARE + SYSTEMS</text>
-    <text x="596" y="35" fill="#A5F3FC" font-size="14">BUILD</text><text x="596" y="56" fill="#E2E8F0" font-size="13">IOT + AUTOMATION + 3D</text>
-    <text x="910" y="35" fill="#C4B5FD" font-size="14">PROFILE</text><text x="910" y="56" fill="#E2E8F0" font-size="13">ASSETS SYNCED BY ACTIONS</text>
+  <rect x="1" y="1" width="1498" height="92" rx="22" fill="url(#panel)" stroke="url(#edge)" stroke-opacity=".5" stroke-width="1.5"/>
+  <path d="M25 2H1475" stroke="url(#edge)" stroke-width="2" opacity=".75"/>
+  <circle cx="36" cy="46" r="7" fill="#40E3B9"/><circle cx="36" cy="46" r="13" fill="none" stroke="#40E3B9" stroke-opacity=".22" stroke-width="4"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="66" y="40" fill="#F3FAFF" font-size="17" font-weight="800" letter-spacing="1.5">BUILD MODE</text>
+    <text x="66" y="64" fill="#88A0BC" font-size="12" letter-spacing="1">LEARN · SHIP · IMPROVE</text>
+    <path d="M270 18V76M655 18V76M1035 18V76" stroke="#6A809D" stroke-opacity=".28"/>
+    <text x="300" y="39" fill="#44E3D0" font-size="12" font-weight="700" letter-spacing="2">ENGINEERING</text><text x="300" y="64" fill="#E6EFF9" font-size="16">SOFTWARE + SYSTEMS</text>
+    <text x="688" y="39" fill="#A6A8FF" font-size="12" font-weight="700" letter-spacing="2">CONNECTED</text><text x="688" y="64" fill="#E6EFF9" font-size="16">IOT + DATA + AUTOMATION</text>
+    <text x="1068" y="39" fill="#FFB278" font-size="12" font-weight="700" letter-spacing="2">CREATIVE</text><text x="1068" y="64" fill="#E6EFF9" font-size="16">3D + VISUAL DESIGN</text>
   </g>
 </svg>
