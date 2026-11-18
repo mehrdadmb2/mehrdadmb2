@@ -1,0 +1,48 @@
+name: Live Profile Data
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: profile-generated-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh market and IoT snapshot
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Build live dashboard SVG
+        run: python scripts/generate_live_profile.py --live-only
+
+      - name: Validate generated dashboard and profile assets
+        run: python scripts/check_profile.py
+
+      - name: Commit changed dashboard only
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- assets/live-dashboard.svg; then
+            echo "No published source data changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/live-dashboard.svg
+          git commit -m "chore(profile): refresh live project dashboard"
+          git push

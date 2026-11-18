@@ -5,16 +5,26 @@ on:
     branches: ["main"]
     paths:
       - "README.md"
+      - "SETUP.md"
       - "assets/**"
       - "scripts/check_profile.py"
+      - "scripts/generate_live_profile.py"
+      - "tests/**"
       - ".github/workflows/profile-health.yml"
+      - ".github/workflows/live-profile-data.yml"
+      - ".github/workflows/featured-movies.yml"
   pull_request:
     branches: ["main"]
     paths:
       - "README.md"
+      - "SETUP.md"
       - "assets/**"
       - "scripts/check_profile.py"
+      - "scripts/generate_live_profile.py"
+      - "tests/**"
       - ".github/workflows/profile-health.yml"
+      - ".github/workflows/live-profile-data.yml"
+      - ".github/workflows/featured-movies.yml"
   workflow_dispatch:
 
 concurrency:
@@ -26,7 +36,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validate README and visual assets
+    name: Validate README and generated visuals
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -35,5 +45,7 @@ jobs:
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
-      - name: Validate local README assets and SVG markup
+      - name: Validate README references and SVG assets
         run: python scripts/check_profile.py
+      - name: Run generator unit tests
+        run: python -m unittest discover -s tests -v
