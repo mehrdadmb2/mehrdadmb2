@@ -125,7 +125,18 @@ A cross-project snapshot assembled from the public data published by my own repo
 A small, automatically refreshed window into my IMDb Showcase collection. Featured titles are selected from the repository's own movie dataset using personal ratings; posters are copied from its local poster cache, so the profile does not depend on hotlinking random poster sites.
 
 <!-- FEATURED-MOVIES:START -->
-> Movie posters will appear after the first successful run of **Featured Movie Posters** in the repository's Actions tab. The full library is available at [IMDb Showcase](https://mehrdadmb2.github.io/imdb-showcase/).
+
+<div align="center">
+<table>
+<tr>
+<td align="center" width="25%"><a href="https://www.imdb.com/title/tt43749709/"><img src="assets/posters/featured-tt43749709.webp" width="126" alt="Grand Theft Auto VI: An Extended Look poster"></a><br><b><a href="https://www.imdb.com/title/tt43749709/">Grand Theft Auto VI: An Extended Look</a></b><br><sub>2026 · Personal ★ 10.0/10</sub></td>
+<td align="center" width="25%"><a href="https://www.imdb.com/title/tt37536381/"><img src="assets/posters/featured-tt37536381.webp" width="126" alt="Takopi&#x27;s Original Sin: 2016-nen no kimitachi e poster"></a><br><b><a href="https://www.imdb.com/title/tt37536381/">Takopi&#x27;s Original Sin: 2016-nen no kimitachi e</a></b><br><sub>2025 · Personal ★ 10.0/10</sub></td>
+<td align="center" width="25%"><a href="https://www.imdb.com/title/tt12650854/"><img src="assets/posters/featured-tt12650854.webp" width="126" alt="Cyberpunk: Edgerunners: My Moon My Man / Watashi no tsuki, watashi no koi poster"></a><br><b><a href="https://www.imdb.com/title/tt12650854/">Cyberpunk: Edgerunners: My Moon My Man / Watashi no tsuki, watashi no koi</a></b><br><sub>2022 · Personal ★ 10.0/10</sub></td>
+<td align="center" width="25%"><a href="https://www.imdb.com/title/tt31804612/"><img src="assets/posters/featured-tt31804612.webp" width="126" alt="The Last of Us: Through the Valley poster"></a><br><b><a href="https://www.imdb.com/title/tt31804612/">The Last of Us: Through the Valley</a></b><br><sub>2025 · Personal ★ 10.0/10</sub></td>
+</tr>
+</table>
+<sub>Selected from the latest published IMDb Showcase dataset · <a href="https://mehrdadmb2.github.io/imdb-showcase/">Open the full library ↗</a></sub>
+</div>
 <!-- FEATURED-MOVIES:END -->
 
 ---
