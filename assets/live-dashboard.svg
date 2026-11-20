@@ -18,7 +18,7 @@
 <g filter="url(#soft)"><rect x="28" y="101" width="712" height="157" rx="22" fill="url(#panel)" stroke="#F5B45F" stroke-opacity=".38"/></g>
 <rect x="52" y="124" width="5" height="36" rx="2.5" fill="#F5B45F"/>
 <text x="74" y="148" fill="#B7C9DE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="800" text-anchor="start" letter-spacing="1.8">18K GOLD  /  GRAM</text>
-<text x="52" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">24,046,149</text>
+<text x="52" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">23,191,692</text>
 <text x="52" y="232" fill="#8198B5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="1.5">TOMAN</text>
 <rect x="579" y="120" width="135" height="31" rx="15" fill="#142A37" stroke="#42E4C5" stroke-opacity=".6"/>
 <circle cx="598" cy="135" r="4" fill="#42E4C5"/>
@@ -27,7 +27,7 @@
 <g filter="url(#soft)"><rect x="760" y="101" width="712" height="157" rx="22" fill="url(#panel)" stroke="#49DCCB" stroke-opacity=".38"/></g>
 <rect x="784" y="124" width="5" height="36" rx="2.5" fill="#49DCCB"/>
 <text x="806" y="148" fill="#B7C9DE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="800" text-anchor="start" letter-spacing="1.8">USDT  /  IRR RATE</text>
-<text x="784" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">272,213</text>
+<text x="784" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">271,884</text>
 <text x="784" y="232" fill="#8198B5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="1.5">TOMAN</text>
 <rect x="1311" y="120" width="135" height="31" rx="15" fill="#142A37" stroke="#42E4C5" stroke-opacity=".6"/>
 <circle cx="1330" cy="135" r="4" fill="#42E4C5"/>
@@ -39,17 +39,17 @@
 <rect x="583" y="297" width="130" height="30" rx="15" fill="#142A37" stroke="#42E4C5" stroke-opacity=".58"/>
 <circle cx="602" cy="312" r="4" fill="#42E4C5"/>
 <text x="617" y="317" fill="#42E4C5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="800" text-anchor="start" letter-spacing="0.7">ONLINE</text>
-<text x="54" y="385" fill="#F5F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="39" font-weight="800" text-anchor="start">23.3</text>
+<text x="54" y="385" fill="#F5F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="39" font-weight="800" text-anchor="start">22.8</text>
 <text x="181" y="385" fill="#9BAEC6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start">°C</text>
 <text x="54" y="411" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.6">TEMPERATURE</text>
-<text x="280" y="385" fill="#F5F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="39" font-weight="800" text-anchor="start">34.4</text>
+<text x="280" y="385" fill="#F5F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="39" font-weight="800" text-anchor="start">33.9</text>
 <text x="405" y="385" fill="#9BAEC6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start">%</text>
 <text x="280" y="411" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.6">HUMIDITY</text>
 <path d="M500 350V421" stroke="#66809F" stroke-opacity=".25"/>
 <text x="524" y="369" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.3">LATENCY</text>
-<text x="524" y="395" fill="#E6EFF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" text-anchor="start">54 ms</text>
-<text x="524" y="424" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start">SAMPLES  1922</text>
-<text x="54" y="458" fill="#7089A7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.25">LAST SEEN  ·  20 NOV 2026  ·  00:49:39 TEHRAN</text>
+<text x="524" y="395" fill="#E6EFF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" text-anchor="start">28 ms</text>
+<text x="524" y="424" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start">SAMPLES  3782</text>
+<text x="54" y="458" fill="#7089A7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.25">LAST SEEN  ·  20 NOV 2026  ·  05:59:41 TEHRAN</text>
 <g filter="url(#soft)"><rect x="760" y="278" width="712" height="204" rx="22" fill="url(#panel)" stroke="#49DCCB" stroke-opacity=".36"/></g>
 <rect x="784" y="301" width="5" height="34" rx="2.5" fill="#49DCCB"/>
 <text x="806" y="324" fill="#C5D2E3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800" text-anchor="start" letter-spacing="1">NODE 02  /  Room 2 • Sensor S3</text>
@@ -64,12 +64,12 @@
 <text x="1012" y="411" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.6">HUMIDITY</text>
 <path d="M1232 350V421" stroke="#66809F" stroke-opacity=".25"/>
 <text x="1256" y="369" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.3">LATENCY</text>
-<text x="1256" y="395" fill="#E6EFF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" text-anchor="start">101 ms</text>
-<text x="1256" y="424" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start">SAMPLES  2061</text>
-<text x="786" y="458" fill="#7089A7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.25">LAST SEEN  ·  20 NOV 2026  ·  00:49:39 TEHRAN</text>
+<text x="1256" y="395" fill="#E6EFF8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" text-anchor="start">100 ms</text>
+<text x="1256" y="424" fill="#7790AD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start">SAMPLES  3921</text>
+<text x="786" y="458" fill="#7089A7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.25">LAST SEEN  ·  20 NOV 2026  ·  05:59:41 TEHRAN</text>
 <rect x="28" y="500" width="1444" height="58" rx="16" fill="#0C1727" stroke="#6D86A6" stroke-opacity=".23"/>
 <text x="48" y="523" fill="#7C95B3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.4">MARKET SOURCE</text>
-<text x="48" y="543" fill="#DAE6F4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" text-anchor="start">20 NOV 2026  ·  00:50:20 TEHRAN</text>
-<text x="770" y="523" fill="#7C95B3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="0.5">IOT SOURCE  ·  20 NOV 2026  ·  00:49:39 TEHRAN</text>
+<text x="48" y="543" fill="#DAE6F4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" text-anchor="start">20 NOV 2026  ·  05:55:21 TEHRAN</text>
+<text x="770" y="523" fill="#7C95B3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="0.5">IOT SOURCE  ·  20 NOV 2026  ·  05:59:41 TEHRAN</text>
 <text x="770" y="543" fill="#8EA5C0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.4">FRESHNESS IS BASED ON SOURCE TIMESTAMPS — NOT THE PROFILE WORKFLOW START TIME</text>
 </svg>
