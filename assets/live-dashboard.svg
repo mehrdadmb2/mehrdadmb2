@@ -18,7 +18,7 @@
 <g filter="url(#soft)"><rect x="28" y="101" width="712" height="157" rx="22" fill="url(#panel)" stroke="#F5B45F" stroke-opacity=".38"/></g>
 <rect x="52" y="124" width="5" height="36" rx="2.5" fill="#F5B45F"/>
 <text x="74" y="148" fill="#B7C9DE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="800" text-anchor="start" letter-spacing="1.8">18K GOLD  /  GRAM</text>
-<text x="52" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">23,472,077</text>
+<text x="52" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">23,417,746</text>
 <text x="52" y="232" fill="#8198B5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="1.5">TOMAN</text>
 <rect x="579" y="120" width="135" height="31" rx="15" fill="#142A37" stroke="#42E4C5" stroke-opacity=".6"/>
 <circle cx="598" cy="135" r="4" fill="#42E4C5"/>
@@ -27,7 +27,7 @@
 <g filter="url(#soft)"><rect x="760" y="101" width="712" height="157" rx="22" fill="url(#panel)" stroke="#49DCCB" stroke-opacity=".38"/></g>
 <rect x="784" y="124" width="5" height="36" rx="2.5" fill="#49DCCB"/>
 <text x="806" y="148" fill="#B7C9DE" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="800" text-anchor="start" letter-spacing="1.8">USDT  /  IRR RATE</text>
-<text x="784" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">272,666</text>
+<text x="784" y="205" fill="#F4F8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="38" font-weight="800" text-anchor="start">272,799</text>
 <text x="784" y="232" fill="#8198B5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" text-anchor="start" letter-spacing="1.5">TOMAN</text>
 <rect x="1311" y="120" width="135" height="31" rx="15" fill="#142A37" stroke="#42E4C5" stroke-opacity=".6"/>
 <circle cx="1330" cy="135" r="4" fill="#42E4C5"/>
@@ -69,7 +69,7 @@
 <text x="786" y="458" fill="#7089A7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.25">LAST SEEN  ·  21 DEC 2026  ·  21:35:40 TEHRAN</text>
 <rect x="28" y="500" width="1444" height="58" rx="16" fill="#0C1727" stroke="#6D86A6" stroke-opacity=".23"/>
 <text x="48" y="523" fill="#7C95B3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="1.4">MARKET SOURCE</text>
-<text x="48" y="543" fill="#DAE6F4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" text-anchor="start">22 NOV 2026  ·  19:40:21 TEHRAN</text>
+<text x="48" y="543" fill="#DAE6F4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" text-anchor="start">23 NOV 2026  ·  01:20:21 TEHRAN</text>
 <text x="770" y="523" fill="#7C95B3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" text-anchor="start" letter-spacing="0.5">IOT SOURCE  ·  21 DEC 2026  ·  21:35:40 TEHRAN</text>
 <text x="770" y="543" fill="#8EA5C0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.4">FRESHNESS IS BASED ON SOURCE TIMESTAMPS — NOT THE PROFILE WORKFLOW START TIME</text>
 </svg>
